@@ -1,0 +1,770 @@
+{
+  "extensionName": {
+    "message": "PDF Tools - Todo en Uno",
+    "description": "Nombre de la extensión"
+  },
+  "extensionDescription": {
+    "message": "Convierte, une, divide, rota, comprime PDFs y más. 100% local y privado.",
+    "description": "Descripción de la extensión"
+  },
+
+  "app_title": {
+    "message": "PDF Tools",
+    "description": "Título de la aplicación"
+  },
+
+  "tab_merge": {
+    "message": "UNIR",
+    "description": "Tab para unir PDFs"
+  },
+  "tab_img": {
+    "message": "IMG",
+    "description": "Tab para conversiones de imagen"
+  },
+  "tab_pdf": {
+    "message": "PDF",
+    "description": "Tab para herramientas PDF"
+  },
+  "tab_web": {
+    "message": "WEB",
+    "description": "Tab para página web a PDF"
+  },
+
+  "welcome_title": {
+    "message": "¡Bienvenido!",
+    "description": "Título de bienvenida"
+  },
+  "welcome_subtitle": {
+    "message": "¿Listo para gestionar tus PDFs?",
+    "description": "Subtítulo de bienvenida"
+  },
+
+  "drop_files_here": {
+    "message": "Arrastra tus archivos aquí",
+    "description": "Texto de zona de arrastre"
+  },
+  "or_tap_to_upload": {
+    "message": "o toca para subir",
+    "description": "Texto alternativo de subida"
+  },
+  "select_files": {
+    "message": "Seleccionar Archivo(s)",
+    "description": "Botón de selección de archivos"
+  },
+  "select_file": {
+    "message": "Seleccionar Archivo",
+    "description": "Botón de selección de archivo"
+  },
+  "select_images": {
+    "message": "Seleccionar Imágenes",
+    "description": "Botón de selección de imágenes"
+  },
+  "select_pdf": {
+    "message": "Seleccionar PDF",
+    "description": "Botón de selección de PDF"
+  },
+
+  "tool_merge_title": {
+    "message": "Unir PDFs",
+    "description": "Título de herramienta unir"
+  },
+  "tool_merge_description": {
+    "message": "Combina varios PDFs en un único archivo.",
+    "description": "Descripción de herramienta unir"
+  },
+
+  "tool_split_title": {
+    "message": "Dividir PDF",
+    "description": "Título de herramienta dividir"
+  },
+  "tool_split_description": {
+    "message": "Separa una o varias páginas de tu PDF.",
+    "description": "Descripción de herramienta dividir"
+  },
+
+  "tool_rotate_title": {
+    "message": "Rotar PDF",
+    "description": "Título de herramienta rotar"
+  },
+  "tool_rotate_description": {
+    "message": "Gira tu PDF como quieras.",
+    "description": "Descripción de herramienta rotar"
+  },
+
+  "tool_watermark_title": {
+    "message": "Marca de Agua",
+    "description": "Título de herramienta marca de agua"
+  },
+  "tool_watermark_description": {
+    "message": "Añade una imagen o texto a tu PDF.",
+    "description": "Descripción de herramienta marca de agua"
+  },
+
+  "tool_compress_title": {
+    "message": "Comprimir PDF",
+    "description": "Título de herramienta comprimir"
+  },
+  "tool_compress_description": {
+    "message": "Reduce el tamaño de tu archivo PDF.",
+    "description": "Descripción de herramienta comprimir"
+  },
+
+  "tool_pdf_to_jpg_title": {
+    "message": "PDF a JPG",
+    "description": "Título de herramienta PDF a JPG"
+  },
+  "tool_pdf_to_jpg_description": {
+    "message": "Convierte páginas a imágenes JPG.",
+    "description": "Descripción de herramienta PDF a JPG"
+  },
+
+  "tool_pdf_to_png_title": {
+    "message": "PDF a PNG",
+    "description": "Título de herramienta PDF a PNG"
+  },
+  "tool_pdf_to_png_description": {
+    "message": "Convierte páginas a imágenes PNG.",
+    "description": "Descripción de herramienta PDF a PNG"
+  },
+
+  "tool_pdf_to_word_title": {
+    "message": "PDF a Word",
+    "description": "Título de herramienta PDF a Word"
+  },
+  "tool_pdf_to_word_description": {
+    "message": "Convierte PDF a documento DOCX editable.",
+    "description": "Descripción de herramienta PDF a Word"
+  },
+
+  "tool_jpg_to_pdf_title": {
+    "message": "JPG a PDF",
+    "description": "Título de herramienta JPG a PDF"
+  },
+  "tool_jpg_to_pdf_description": {
+    "message": "Convierte imágenes JPG a un PDF.",
+    "description": "Descripción de herramienta JPG a PDF"
+  },
+
+  "tool_png_to_pdf_title": {
+    "message": "PNG a PDF",
+    "description": "Título de herramienta PNG a PDF"
+  },
+  "tool_png_to_pdf_description": {
+    "message": "Convierte imágenes PNG a un PDF.",
+    "description": "Descripción de herramienta PNG a PDF"
+  },
+
+  "tool_webpage_title": {
+    "message": "Página Web a PDF",
+    "description": "Título de herramienta página web a PDF"
+  },
+  "tool_webpage_description": {
+    "message": "Convierte la página actual a PDF al instante",
+    "description": "Descripción de herramienta página web a PDF"
+  },
+
+  "section_pdf_to_images": {
+    "message": "PDF a Imágenes",
+    "description": "Sección PDF a imágenes"
+  },
+  "section_pdf_to_documents": {
+    "message": "PDF a Documentos",
+    "description": "Sección PDF a documentos"
+  },
+  "section_images_to_pdf": {
+    "message": "Imágenes a PDF",
+    "description": "Sección imágenes a PDF"
+  },
+  "section_pdf_tools": {
+    "message": "Herramientas PDF",
+    "description": "Sección herramientas PDF"
+  },
+
+  "button_back": {
+    "message": "Volver",
+    "description": "Botón volver"
+  },
+  "button_process": {
+    "message": "Procesar",
+    "description": "Botón procesar"
+  },
+  "button_continue": {
+    "message": "Continuar",
+    "description": "Botón continuar"
+  },
+  "button_convert": {
+    "message": "Convertir",
+    "description": "Botón convertir"
+  },
+  "button_convert_to_pdf": {
+    "message": "Convertir a PDF",
+    "description": "Botón convertir a PDF"
+  },
+  "button_convert_to_word": {
+    "message": "Convertir a Word",
+    "description": "Botón convertir a Word"
+  },
+  "button_merge_pdfs": {
+    "message": "Unir PDFs",
+    "description": "Botón unir PDFs"
+  },
+  "button_split_pdf": {
+    "message": "Dividir PDF",
+    "description": "Botón dividir PDF"
+  },
+  "button_rotate_pdf": {
+    "message": "Rotar PDF",
+    "description": "Botón rotar PDF"
+  },
+  "button_apply_watermark": {
+    "message": "Aplicar Marca",
+    "description": "Botón aplicar marca de agua"
+  },
+  "button_compress_pdf": {
+    "message": "Comprimir PDF",
+    "description": "Botón comprimir PDF"
+  },
+  "button_create_pdf": {
+    "message": "Crear PDF",
+    "description": "Botón crear PDF"
+  },
+  "button_use_print_dialog": {
+    "message": "Usar diálogo de impresión",
+    "description": "Botón usar diálogo de impresión"
+  },
+
+  "label_format": {
+    "message": "Formato:",
+    "description": "Etiqueta formato"
+  },
+  "label_quality": {
+    "message": "Calidad:",
+    "description": "Etiqueta calidad"
+  },
+  "label_page_size": {
+    "message": "Tamaño de página:",
+    "description": "Etiqueta tamaño de página"
+  },
+  "label_orientation": {
+    "message": "Orientación:",
+    "description": "Etiqueta orientación"
+  },
+  "label_fit": {
+    "message": "Ajuste:",
+    "description": "Etiqueta ajuste"
+  },
+  "label_rotation_angle": {
+    "message": "Ángulo de rotación:",
+    "description": "Etiqueta ángulo de rotación"
+  },
+  "label_apply_to": {
+    "message": "Aplicar a:",
+    "description": "Etiqueta aplicar a"
+  },
+  "label_pages": {
+    "message": "Páginas (ej: 1, 3, 5-7):",
+    "description": "Etiqueta páginas"
+  },
+  "label_watermark_type": {
+    "message": "Tipo:",
+    "description": "Etiqueta tipo de marca"
+  },
+  "label_watermark_text": {
+    "message": "Texto:",
+    "description": "Etiqueta texto de marca"
+  },
+  "label_font_size": {
+    "message": "Tamaño de fuente:",
+    "description": "Etiqueta tamaño de fuente"
+  },
+  "label_opacity": {
+    "message": "Opacidad:",
+    "description": "Etiqueta opacidad"
+  },
+  "label_position": {
+    "message": "Posición:",
+    "description": "Etiqueta posición"
+  },
+  "label_watermark_image": {
+    "message": "Imagen de marca:",
+    "description": "Etiqueta imagen de marca"
+  },
+  "label_compression_level": {
+    "message": "Nivel de compresión:",
+    "description": "Etiqueta nivel de compresión"
+  },
+  "label_remove_metadata": {
+    "message": "Eliminar metadatos",
+    "description": "Etiqueta eliminar metadatos"
+  },
+  "label_original_size": {
+    "message": "Tamaño original:",
+    "description": "Etiqueta tamaño original"
+  },
+  "label_capture_mode": {
+    "message": "Modo de captura:",
+    "description": "Etiqueta modo de captura"
+  },
+  "label_include_margins": {
+    "message": "Incluir márgenes",
+    "description": "Etiqueta incluir márgenes"
+  },
+
+  "option_jpg": {
+    "message": "JPG",
+    "description": "Opción JPG"
+  },
+  "option_png": {
+    "message": "PNG",
+    "description": "Opción PNG"
+  },
+  "option_webp": {
+    "message": "WebP",
+    "description": "Opción WebP"
+  },
+  "option_high_quality": {
+    "message": "Alta (150 DPI)",
+    "description": "Opción alta calidad"
+  },
+  "option_very_high_quality": {
+    "message": "Muy Alta (300 DPI)",
+    "description": "Opción muy alta calidad"
+  },
+  "option_medium_quality": {
+    "message": "Media (Web)",
+    "description": "Opción media calidad"
+  },
+  "option_a4": {
+    "message": "A4",
+    "description": "Opción A4"
+  },
+  "option_letter": {
+    "message": "Carta",
+    "description": "Opción carta"
+  },
+  "option_legal": {
+    "message": "Legal",
+    "description": "Opción legal"
+  },
+  "option_auto_fit": {
+    "message": "Ajustar a Imagen",
+    "description": "Opción ajustar a imagen"
+  },
+  "option_portrait": {
+    "message": "Vertical",
+    "description": "Opción vertical"
+  },
+  "option_landscape": {
+    "message": "Horizontal",
+    "description": "Opción horizontal"
+  },
+  "option_fit_to_page": {
+    "message": "Ajustar a página",
+    "description": "Opción ajustar a página"
+  },
+  "option_original_size": {
+    "message": "Tamaño original",
+    "description": "Opción tamaño original"
+  },
+  "option_rotate_90": {
+    "message": "90° (Derecha)",
+    "description": "Opción rotar 90 grados"
+  },
+  "option_rotate_180": {
+    "message": "180°",
+    "description": "Opción rotar 180 grados"
+  },
+  "option_rotate_270": {
+    "message": "270° (Izquierda)",
+    "description": "Opción rotar 270 grados"
+  },
+  "option_all_pages": {
+    "message": "Todas las páginas",
+    "description": "Opción todas las páginas"
+  },
+  "option_specific_pages": {
+    "message": "Páginas específicas",
+    "description": "Opción páginas específicas"
+  },
+  "option_text": {
+    "message": "Texto",
+    "description": "Opción texto"
+  },
+  "option_image": {
+    "message": "Imagen",
+    "description": "Opción imagen"
+  },
+  "option_small_font": {
+    "message": "Pequeño (24px)",
+    "description": "Opción fuente pequeña"
+  },
+  "option_medium_font": {
+    "message": "Mediano (48px)",
+    "description": "Opción fuente mediana"
+  },
+  "option_large_font": {
+    "message": "Grande (72px)",
+    "description": "Opción fuente grande"
+  },
+  "option_center_diagonal": {
+    "message": "Centro (diagonal)",
+    "description": "Opción centro diagonal"
+  },
+  "option_top": {
+    "message": "Arriba",
+    "description": "Opción arriba"
+  },
+  "option_bottom": {
+    "message": "Abajo",
+    "description": "Opción abajo"
+  },
+  "option_low_compression": {
+    "message": "Baja (mejor calidad)",
+    "description": "Opción compresión baja"
+  },
+  "option_medium_compression": {
+    "message": "Media (recomendado)",
+    "description": "Opción compresión media"
+  },
+  "option_high_compression": {
+    "message": "Alta (menor tamaño)",
+    "description": "Opción compresión alta"
+  },
+  "option_visible_area": {
+    "message": "Área visible",
+    "description": "Opción área visible"
+  },
+  "option_full_page": {
+    "message": "Página completa (scroll)",
+    "description": "Opción página completa"
+  },
+
+  "split_mode_ranges": {
+    "message": "Rangos",
+    "description": "Modo dividir por rangos"
+  },
+  "split_mode_extract": {
+    "message": "Extraer",
+    "description": "Modo extraer páginas"
+  },
+  "split_mode_every_n": {
+    "message": "Cada N",
+    "description": "Modo dividir cada N páginas"
+  },
+  "split_mode_single": {
+    "message": "1 x Pág",
+    "description": "Modo una página por archivo"
+  },
+  "split_input_ranges": {
+    "message": "Páginas (ej: 1-3, 5, 7-10):",
+    "description": "Input de rangos"
+  },
+  "split_input_every_n": {
+    "message": "Dividir cada N páginas:",
+    "description": "Input cada N páginas"
+  },
+  "pages_info": {
+    "message": "$COUNT$ páginas • $SIZE$",
+    "description": "Info de páginas y tamaño",
+    "placeholders": {
+      "count": { "content": "$1" },
+      "size": { "content": "$2" }
+    }
+  },
+
+  "options_title_conversion": {
+    "message": "Opciones de Conversión",
+    "description": "Título opciones de conversión"
+  },
+  "options_title_pdf": {
+    "message": "Opciones del PDF",
+    "description": "Título opciones del PDF"
+  },
+  "options_title_rotation": {
+    "message": "Opciones de Rotación",
+    "description": "Título opciones de rotación"
+  },
+  "options_title_watermark": {
+    "message": "Configurar Marca de Agua",
+    "description": "Título opciones de marca de agua"
+  },
+  "options_title_compression": {
+    "message": "Opciones de Compresión",
+    "description": "Título opciones de compresión"
+  },
+  "options_title_webpage": {
+    "message": "Configuración del PDF",
+    "description": "Título opciones de página web"
+  },
+
+  "upload_pdf_to_split": {
+    "message": "Sube el PDF a dividir",
+    "description": "Subir PDF para dividir"
+  },
+  "upload_pdf_to_rotate": {
+    "message": "Sube el PDF a rotar",
+    "description": "Subir PDF para rotar"
+  },
+  "upload_pdf_to_watermark": {
+    "message": "Sube el PDF",
+    "description": "Subir PDF para marca de agua"
+  },
+  "upload_pdf_to_compress": {
+    "message": "Sube el PDF a comprimir",
+    "description": "Subir PDF para comprimir"
+  },
+  "upload_pdf_to_convert": {
+    "message": "Sube tu PDF",
+    "description": "Subir PDF para convertir"
+  },
+  "upload_images": {
+    "message": "Sube tus imágenes",
+    "description": "Subir imágenes"
+  },
+
+  "pages_count": {
+    "message": "$COUNT$ páginas",
+    "description": "Contador de páginas",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "10"
+      }
+    }
+  },
+
+  "webpage_loading": {
+    "message": "Obteniendo información de la página...",
+    "description": "Cargando información de página"
+  },
+  "webpage_ready": {
+    "message": "Lista para convertir",
+    "description": "Página lista para convertir"
+  },
+  "webpage_protected": {
+    "message": "Página protegida",
+    "description": "Página protegida"
+  },
+  "webpage_protected_description": {
+    "message": "Las páginas del sistema no se pueden capturar por seguridad.",
+    "description": "Descripción página protegida"
+  },
+  "webpage_protected_hint": {
+    "message": "Navega a una página web normal para convertirla a PDF.",
+    "description": "Sugerencia página protegida"
+  },
+  "webpage_cannot_capture": {
+    "message": "No se puede capturar",
+    "description": "No se puede capturar"
+  },
+  "webpage_tip": {
+    "message": "💡 Consejo: Asegúrate de que la página esté completamente cargada antes de convertir.",
+    "description": "Consejo de página web"
+  },
+
+  "docx_feature_1": {
+    "message": "Extrae todo el texto del PDF",
+    "description": "Característica DOCX 1"
+  },
+  "docx_feature_2": {
+    "message": "Mantiene la estructura por páginas",
+    "description": "Característica DOCX 2"
+  },
+  "docx_feature_3": {
+    "message": "Archivo DOCX editable en Word",
+    "description": "Característica DOCX 3"
+  },
+  "docx_feature_4": {
+    "message": "Conversión 100% local y privada",
+    "description": "Característica DOCX 4"
+  },
+
+  "badge_popular": {
+    "message": "Popular",
+    "description": "Badge popular"
+  },
+
+  "status_processing": {
+    "message": "Procesando...",
+    "description": "Estado procesando"
+  },
+  "status_processing_page": {
+    "message": "Procesando página $CURRENT$ de $TOTAL$...",
+    "description": "Estado procesando página",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "5"
+      },
+      "total": {
+        "content": "$2",
+        "example": "10"
+      }
+    }
+  },
+  "status_finalizing": {
+    "message": "Finalizando PDF...",
+    "description": "Estado finalizando"
+  },
+  "status_generating_file": {
+    "message": "Generando archivo final...",
+    "description": "Estado generando archivo"
+  },
+  "status_extracting_text": {
+    "message": "Extrayendo texto del PDF...",
+    "description": "Estado extrayendo texto"
+  },
+  "status_generating_word": {
+    "message": "Generando documento Word...",
+    "description": "Estado generando Word"
+  },
+  "status_capturing_page": {
+    "message": "Capturando página...",
+    "description": "Estado capturando página"
+  },
+  "status_adding_image": {
+    "message": "Añadiendo imagen al PDF...",
+    "description": "Estado añadiendo imagen"
+  },
+  "status_applying_watermark": {
+    "message": "Aplicando marca de agua...",
+    "description": "Estado aplicando marca"
+  },
+  "status_rotating_pages": {
+    "message": "Rotando páginas...",
+    "description": "Estado rotando"
+  },
+  "status_compressing": {
+    "message": "Analizando PDF...",
+    "description": "Estado comprimiendo"
+  },
+  "status_saving_pdf": {
+    "message": "Guardando PDF...",
+    "description": "Estado guardando PDF"
+  },
+
+  "success_merged": {
+    "message": "¡PDF unido con éxito!",
+    "description": "Éxito al unir"
+  },
+  "success_converted": {
+    "message": "¡Conversión completada!",
+    "description": "Éxito al convertir"
+  },
+  "success_created": {
+    "message": "¡PDF creado con éxito!",
+    "description": "Éxito al crear"
+  },
+  "success_split": {
+    "message": "¡PDF dividido con éxito!",
+    "description": "Éxito al dividir"
+  },
+  "success_rotated": {
+    "message": "¡PDF rotado con éxito!",
+    "description": "Éxito al rotar"
+  },
+  "success_watermark": {
+    "message": "¡Marca de agua aplicada!",
+    "description": "Éxito marca de agua"
+  },
+  "success_compressed": {
+    "message": "¡Comprimido! Ahorro: $PERCENT$%",
+    "description": "Éxito al comprimir",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "45"
+      }
+    }
+  },
+  "success_webpage": {
+    "message": "¡Página convertida a PDF!",
+    "description": "Éxito página web"
+  },
+  "success_docx": {
+    "message": "¡Convertido a Word exitosamente!",
+    "description": "Éxito DOCX"
+  },
+  "success_pdf_created": {
+    "message": "¡PDF creado!",
+    "description": "Éxito PDF creado"
+  },
+
+  "error_generic": {
+    "message": "Error: $MESSAGE$",
+    "description": "Error genérico",
+    "placeholders": {
+      "message": {
+        "content": "$1",
+        "example": "Archivo no válido"
+      }
+    }
+  },
+  "error_file_invalid": {
+    "message": "El archivo no es un PDF válido.",
+    "description": "Error archivo inválido"
+  },
+  "error_no_pdf_loaded": {
+    "message": "No hay PDF cargado.",
+    "description": "Error sin PDF"
+  },
+  "error_min_files": {
+    "message": "Se necesitan al menos 2 archivos PDF para unir.",
+    "description": "Error mínimo de archivos"
+  },
+  "error_no_images": {
+    "message": "No hay imágenes seleccionadas.",
+    "description": "Error sin imágenes"
+  },
+  "error_no_valid_pages": {
+    "message": "No se especificaron páginas válidas.",
+    "description": "Error páginas inválidas"
+  },
+  "error_capture_failed": {
+    "message": "No se pudo capturar la página. Asegúrate de que la página esté cargada completamente.",
+    "description": "Error captura fallida"
+  },
+  "error_print_failed": {
+    "message": "No se pudo abrir el diálogo de impresión.",
+    "description": "Error impresión fallida"
+  },
+  "error_no_page_info": {
+    "message": "No hay información de la página.",
+    "description": "Error sin info de página"
+  },
+  "error_restricted_page": {
+    "message": "No se puede capturar esta página del sistema.",
+    "description": "Error página restringida"
+  },
+  "error_no_active_tab": {
+    "message": "No se pudo obtener la pestaña activa.",
+    "description": "Error sin pestaña activa"
+  },
+  "error_image_invalid": {
+    "message": "El archivo no es una imagen válida.",
+    "description": "Error imagen inválida"
+  },
+  "error_split_mode_invalid": {
+    "message": "Modo de división no válido.",
+    "description": "Error modo división"
+  },
+
+  "settings_title": {
+    "message": "Configuración",
+    "description": "Título configuración"
+  },
+  "settings_language": {
+    "message": "Idioma",
+    "description": "Configuración de idioma"
+  },
+  "settings_language_changed": {
+    "message": "Idioma cambiado exitosamente",
+    "description": "Idioma cambiado"
+  },
+
+  "default_watermark_text": {
+    "message": "CONFIDENCIAL",
+    "description": "Texto por defecto de marca de agua"
+  }
+}
+

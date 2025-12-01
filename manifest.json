@@ -1,8 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "PDF Tools Sidebar All-in-One",
-    "version": "1.0.0",
-    "description": "Suite completa de herramientas PDF locales: Convertir, Unir, Dividir y más.",
+    "name": "__MSG_extensionName__",
+    "version": "1.1.0",
+    "description": "__MSG_extensionDescription__",
+    "default_locale": "es",
     "icons": {
         "16": "assets/icon16.png",
         "48": "assets/icon48.png",
@@ -15,7 +16,7 @@
         "service_worker": "core/background.js"
     },
     "action": {
-        "default_title": "Abrir Herramientas PDF"
+        "default_title": "__MSG_extensionName__"
     },
     "permissions": [
         "sidePanel",
@@ -36,7 +37,8 @@
                 "libs/*",
                 "modules/*",
                 "utils/*",
-                "assets/*"
+                "assets/*",
+                "_locales/*"
             ],
             "matches": [
                 "<all_urls>"

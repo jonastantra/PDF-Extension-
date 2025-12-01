@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Tools Sidebar</title>
     <link rel="stylesheet" href="sidebar.css">
+    <!-- Google Fonts con soporte multi-idioma -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,9 +18,9 @@
             <div class="header-top">
                 <div class="logo">
                     <img src="../assets/icon48.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
-                    <span class="logo-text">PDF Tools</span>
+                    <span class="logo-text" data-i18n="app_title">PDF Tools</span>
                 </div>
-                <button class="settings-btn" title="Configuración">
+                <button class="settings-btn" data-i18n-title="settings_title" title="Configuración">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="3"></circle>
                         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
@@ -24,17 +28,17 @@
                 </button>
             </div>
             <nav class="main-nav">
-                <button class="nav-tab active" data-tab="merge" title="Unir PDFs">
-                    <span class="label">UNIR</span>
+                <button class="nav-tab active" data-tab="merge" data-i18n-title="tool_merge_title">
+                    <span class="label" data-i18n="tab_merge">UNIR</span>
                 </button>
-                <button class="nav-tab" data-tab="img" title="Herramientas de Imagen">
-                    <span class="label">IMG</span>
+                <button class="nav-tab" data-tab="img" data-i18n-title="section_images_to_pdf">
+                    <span class="label" data-i18n="tab_img">IMG</span>
                 </button>
-                <button class="nav-tab" data-tab="pdf" title="Herramientas PDF">
-                    <span class="label">PDF</span>
+                <button class="nav-tab" data-tab="pdf" data-i18n-title="section_pdf_tools">
+                    <span class="label" data-i18n="tab_pdf">PDF</span>
                 </button>
-                <button class="nav-tab" data-tab="web" title="Página Web a PDF">
-                    <span class="label">WEB</span>
+                <button class="nav-tab" data-tab="web" data-i18n-title="tool_webpage_title">
+                    <span class="label" data-i18n="tab_web">WEB</span>
                 </button>
             </nav>
         </header>
@@ -43,8 +47,8 @@
             <!-- ==================== TAB: MERGE (Direct Tool) ==================== -->
             <section id="view-merge" class="view-section active">
                 <div class="tool-header">
-                    <h2 class="welcome-text">¡Bienvenido!</h2>
-                    <p>¿Listo para gestionar tus PDFs?</p>
+                    <h2 class="welcome-text" data-i18n="welcome_title">¡Bienvenido!</h2>
+                    <p data-i18n="welcome_subtitle">¿Listo para gestionar tus PDFs?</p>
                 </div>
 
                 <div class="drop-zone" id="merge-drop-zone">
@@ -56,9 +60,9 @@
                                 <line x1="12" y1="3" x2="12" y2="15"></line>
                             </svg>
                         </div>
-                        <h3>Arrastra tus archivos aquí</h3>
-                        <p>o toca para subir</p>
-                        <button type="button" class="select-files-btn" id="merge-select-btn">Seleccionar Archivo(s)</button>
+                        <h3 data-i18n="drop_files_here">Arrastra tus archivos aquí</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para subir</p>
+                        <button type="button" class="select-files-btn" id="merge-select-btn" data-i18n="select_files">Seleccionar Archivo(s)</button>
                         <input type="file" id="merge-file-input" multiple accept=".pdf" hidden>
                     </div>
                 </div>
@@ -70,7 +74,7 @@
 
             <!-- ==================== TAB: IMG (Dashboard) ==================== -->
             <section id="view-img" class="view-section">
-                <div class="section-title">PDF a Imágenes</div>
+                <div class="section-title" data-i18n="section_pdf_to_images">PDF a Imágenes</div>
                 <div class="tool-grid">
                     <div class="tool-card" data-tool="pdf-to-jpg" style="--card-color: var(--color-pdf-jpg); --card-bg: var(--color-pdf-jpg-bg);">
                         <div class="card-icon">
@@ -81,8 +85,8 @@
                             </svg>
                         </div>
                         <div class="card-content">
-                            <h3>PDF a JPG</h3>
-                            <p>Convierte páginas a imágenes JPG.</p>
+                            <h3 data-i18n="tool_pdf_to_jpg_title">PDF a JPG</h3>
+                            <p data-i18n="tool_pdf_to_jpg_description">Convierte páginas a imágenes JPG.</p>
                         </div>
                     </div>
                     <div class="tool-card" data-tool="pdf-to-png" style="--card-color: var(--color-pdf-png); --card-bg: var(--color-pdf-png-bg);">
@@ -94,13 +98,13 @@
                             </svg>
                         </div>
                         <div class="card-content">
-                            <h3>PDF a PNG</h3>
-                            <p>Convierte páginas a imágenes PNG.</p>
+                            <h3 data-i18n="tool_pdf_to_png_title">PDF a PNG</h3>
+                            <p data-i18n="tool_pdf_to_png_description">Convierte páginas a imágenes PNG.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="section-title mt-6">PDF a Documentos</div>
+                <div class="section-title mt-6" data-i18n="section_pdf_to_documents">PDF a Documentos</div>
                 <div class="tool-grid">
                     <div class="tool-card featured-card" data-tool="pdf-to-docx" style="--card-color: #2563eb; --card-bg: #eff6ff;">
                         <div class="card-icon">
@@ -113,14 +117,14 @@
                             </svg>
                         </div>
                         <div class="card-content">
-                            <h3>PDF a Word</h3>
-                            <p>Convierte PDF a documento DOCX editable.</p>
+                            <h3 data-i18n="tool_pdf_to_word_title">PDF a Word</h3>
+                            <p data-i18n="tool_pdf_to_word_description">Convierte PDF a documento DOCX editable.</p>
                         </div>
-                        <span class="card-badge">Popular</span>
+                        <span class="card-badge" data-i18n="badge_popular">Popular</span>
                     </div>
                 </div>
 
-                <div class="section-title mt-6">Imágenes a PDF</div>
+                <div class="section-title mt-6" data-i18n="section_images_to_pdf">Imágenes a PDF</div>
                 <div class="tool-grid">
                     <div class="tool-card" data-tool="jpg-to-pdf" style="--card-color: var(--color-jpg-pdf); --card-bg: var(--color-jpg-pdf-bg);">
                         <div class="card-icon">
@@ -130,8 +134,8 @@
                             </svg>
                         </div>
                         <div class="card-content">
-                            <h3>JPG a PDF</h3>
-                            <p>Convierte imágenes JPG a un PDF.</p>
+                            <h3 data-i18n="tool_jpg_to_pdf_title">JPG a PDF</h3>
+                            <p data-i18n="tool_jpg_to_pdf_description">Convierte imágenes JPG a un PDF.</p>
                         </div>
                     </div>
                     <div class="tool-card" data-tool="png-to-pdf" style="--card-color: var(--color-pdf-png); --card-bg: var(--color-pdf-png-bg);">
@@ -142,8 +146,8 @@
                             </svg>
                         </div>
                         <div class="card-content">
-                            <h3>PNG a PDF</h3>
-                            <p>Convierte imágenes PNG a un PDF.</p>
+                            <h3 data-i18n="tool_png_to_pdf_title">PNG a PDF</h3>
+                            <p data-i18n="tool_png_to_pdf_description">Convierte imágenes PNG a un PDF.</p>
                         </div>
                     </div>
                 </div>
@@ -163,8 +167,8 @@
                             </svg>
                         </div>
                         <div class="tool-list-content">
-                            <h3>Dividir PDF</h3>
-                            <p>Separa una o varias páginas de tu PDF.</p>
+                            <h3 data-i18n="tool_split_title">Dividir PDF</h3>
+                            <p data-i18n="tool_split_description">Separa una o varias páginas de tu PDF.</p>
                         </div>
                         <div class="tool-list-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -181,8 +185,8 @@
                             </svg>
                         </div>
                         <div class="tool-list-content">
-                            <h3>Rotar PDF</h3>
-                            <p>Gira tu PDF como quieras.</p>
+                            <h3 data-i18n="tool_rotate_title">Rotar PDF</h3>
+                            <p data-i18n="tool_rotate_description">Gira tu PDF como quieras.</p>
                         </div>
                         <div class="tool-list-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -198,8 +202,8 @@
                             </svg>
                         </div>
                         <div class="tool-list-content">
-                            <h3>Marca de Agua</h3>
-                            <p>Añade una imagen o texto a tu PDF.</p>
+                            <h3 data-i18n="tool_watermark_title">Marca de Agua</h3>
+                            <p data-i18n="tool_watermark_description">Añade una imagen o texto a tu PDF.</p>
                         </div>
                         <div class="tool-list-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -216,8 +220,8 @@
                             </svg>
                         </div>
                         <div class="tool-list-content">
-                            <h3>Unir PDF</h3>
-                            <p>Combina varios PDFs en un único archivo.</p>
+                            <h3 data-i18n="tool_merge_title">Unir PDF</h3>
+                            <p data-i18n="tool_merge_description">Combina varios PDFs en un único archivo.</p>
                         </div>
                         <div class="tool-list-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -236,8 +240,8 @@
                             </svg>
                         </div>
                         <div class="tool-list-content">
-                            <h3>Comprimir PDF</h3>
-                            <p>Reduce el tamaño de tu archivo PDF.</p>
+                            <h3 data-i18n="tool_compress_title">Comprimir PDF</h3>
+                            <p data-i18n="tool_compress_description">Reduce el tamaño de tu archivo PDF.</p>
                         </div>
                         <div class="tool-list-arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -251,49 +255,49 @@
             <!-- ==================== TAB: WEB (Webpage to PDF) ==================== -->
             <section id="view-web" class="view-section">
                 <div class="tool-header">
-                    <h2>Página Web a PDF</h2>
-                    <p>Convierte la página actual a PDF al instante</p>
+                    <h2 data-i18n="tool_webpage_title">Página Web a PDF</h2>
+                    <p data-i18n="tool_webpage_description">Convierte la página actual a PDF al instante</p>
                 </div>
 
                 <div class="webpage-info-card" id="webpage-info">
                     <div class="webpage-loading">
                         <div class="spinner"></div>
-                        <p>Obteniendo información de la página...</p>
+                        <p data-i18n="webpage_loading">Obteniendo información de la página...</p>
                     </div>
                 </div>
 
                 <div class="options-panel" id="webpage-options" style="display: none; margin-top: 20px;">
-                    <div class="options-title">Configuración del PDF</div>
+                    <div class="options-title" data-i18n="options_title_webpage">Configuración del PDF</div>
                     
                     <div class="option-group">
-                        <label>Tamaño de página:</label>
+                        <label data-i18n="label_page_size">Tamaño de página:</label>
                         <select id="webpage-format">
-                            <option value="a4" selected>A4</option>
-                            <option value="letter">Carta (Letter)</option>
-                            <option value="legal">Legal</option>
+                            <option value="a4" selected data-i18n="option_a4">A4</option>
+                            <option value="letter" data-i18n="option_letter">Carta (Letter)</option>
+                            <option value="legal" data-i18n="option_legal">Legal</option>
                         </select>
                     </div>
                     
                     <div class="option-group">
-                        <label>Orientación:</label>
+                        <label data-i18n="label_orientation">Orientación:</label>
                         <select id="webpage-orientation">
-                            <option value="portrait" selected>Vertical (Portrait)</option>
-                            <option value="landscape">Horizontal (Landscape)</option>
+                            <option value="portrait" selected data-i18n="option_portrait">Vertical (Portrait)</option>
+                            <option value="landscape" data-i18n="option_landscape">Horizontal (Landscape)</option>
                         </select>
                     </div>
                     
                     <div class="option-group">
-                        <label>Modo de captura:</label>
+                        <label data-i18n="label_capture_mode">Modo de captura:</label>
                         <select id="webpage-capture-mode">
-                            <option value="visible" selected>Área visible</option>
-                            <option value="full">Página completa (scroll)</option>
+                            <option value="visible" selected data-i18n="option_visible_area">Área visible</option>
+                            <option value="full" data-i18n="option_full_page">Página completa (scroll)</option>
                         </select>
                     </div>
                     
                     <div class="option-group">
                         <label>
                             <input type="checkbox" id="webpage-margins" checked>
-                            Incluir márgenes
+                            <span data-i18n="label_include_margins">Incluir márgenes</span>
                         </label>
                     </div>
                 </div>
@@ -305,13 +309,13 @@
                             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
                             <rect x="6" y="14" width="12" height="8"></rect>
                         </svg>
-                        Usar diálogo de impresión
+                        <span data-i18n="button_use_print_dialog">Usar diálogo de impresión</span>
                     </button>
                 </div>
 
                 <div class="webpage-tips-section">
                     <div class="webpage-tips">
-                        <p><strong>💡 Consejo:</strong> Asegúrate de que la página esté completamente cargada antes de convertir.</p>
+                        <p data-i18n="webpage_tip"><strong>💡 Consejo:</strong> Asegúrate de que la página esté completamente cargada antes de convertir.</p>
                     </div>
                 </div>
             </section>
@@ -325,9 +329,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
-                        Volver
+                        <span data-i18n="button_back">Volver</span>
                     </button>
-                    <h2>PDF a Word</h2>
+                    <h2 data-i18n="tool_pdf_to_word_title">PDF a Word</h2>
                 </div>
 
                 <div class="drop-zone" id="docx-drop-zone">
@@ -341,9 +345,9 @@
                                 <polyline points="10 9 9 9 8 9"></polyline>
                             </svg>
                         </div>
-                        <h3>Sube tu PDF</h3>
-                        <p>Arrastra o selecciona el archivo a convertir</p>
-                        <button type="button" class="select-files-btn">Seleccionar PDF</button>
+                        <h3 data-i18n="upload_pdf_to_convert">Sube tu PDF</h3>
+                        <p data-i18n="or_tap_to_upload">Arrastra o selecciona el archivo a convertir</p>
+                        <button type="button" class="select-files-btn" data-i18n="select_pdf">Seleccionar PDF</button>
                         <input type="file" id="docx-file-input" accept=".pdf" hidden>
                     </div>
                 </div>
@@ -356,25 +360,25 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            <span>Extrae todo el texto del PDF</span>
+                            <span data-i18n="docx_feature_1">Extrae todo el texto del PDF</span>
                         </div>
                         <div class="feature-item">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            <span>Mantiene la estructura por páginas</span>
+                            <span data-i18n="docx_feature_2">Mantiene la estructura por páginas</span>
                         </div>
                         <div class="feature-item">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            <span>Archivo DOCX editable en Word</span>
+                            <span data-i18n="docx_feature_3">Archivo DOCX editable en Word</span>
                         </div>
                         <div class="feature-item">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            <span>Conversión 100% local y privada</span>
+                            <span data-i18n="docx_feature_4">Conversión 100% local y privada</span>
                         </div>
                     </div>
                 </div>
@@ -387,16 +391,16 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
-                        Volver
+                        <span data-i18n="button_back">Volver</span>
                     </button>
-                    <h2>Dividir PDF</h2>
+                    <h2 data-i18n="tool_split_title">Dividir PDF</h2>
                 </div>
 
                 <div class="split-modes">
-                    <button class="mode-tab active" data-mode="ranges">Rangos</button>
-                    <button class="mode-tab" data-mode="extract">Extraer</button>
-                    <button class="mode-tab" data-mode="every-n">Cada N</button>
-                    <button class="mode-tab" data-mode="single">1 x Pág</button>
+                    <button class="mode-tab active" data-mode="ranges" data-i18n="split_mode_ranges">Rangos</button>
+                    <button class="mode-tab" data-mode="extract" data-i18n="split_mode_extract">Extraer</button>
+                    <button class="mode-tab" data-mode="every-n" data-i18n="split_mode_every_n">Cada N</button>
+                    <button class="mode-tab" data-mode="single" data-i18n="split_mode_single">1 x Pág</button>
                 </div>
 
                 <div class="drop-zone" id="split-drop-zone">
@@ -410,9 +414,9 @@
                                 <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
                             </svg>
                         </div>
-                        <h3>Sube el PDF a dividir</h3>
-                        <p>o toca para seleccionar</p>
-                        <button type="button" class="select-files-btn">Seleccionar Archivo</button>
+                        <h3 data-i18n="upload_pdf_to_split">Sube el PDF a dividir</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para seleccionar</p>
+                        <button type="button" class="select-files-btn" data-i18n="select_file">Seleccionar Archivo</button>
                         <input type="file" id="split-file-input" accept=".pdf" hidden>
                     </div>
                 </div>
@@ -431,7 +435,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
-                        Volver
+                        <span data-i18n="button_back">Volver</span>
                     </button>
                     <h2 id="convert-tool-title">PDF a Imagen</h2>
                 </div>
@@ -445,33 +449,31 @@
                                 <polyline points="21 15 16 10 5 21"></polyline>
                             </svg>
                         </div>
-                        <h3>Sube tu PDF</h3>
-                        <p>o toca para seleccionar</p>
-                        <button type="button" class="select-files-btn">Seleccionar Archivo</button>
+                        <h3 data-i18n="upload_pdf_to_convert">Sube tu PDF</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para seleccionar</p>
+                        <button type="button" class="select-files-btn" data-i18n="select_file">Seleccionar Archivo</button>
                         <input type="file" id="convert-file-input" accept=".pdf" hidden>
                     </div>
                 </div>
 
-                <div id="convert-file-info" class="file-item" style="display: none; margin-top: 16px;">
-                    <!-- Active file info will be shown here -->
-                </div>
+                <div id="convert-file-info" class="file-item" style="display: none; margin-top: 16px;"></div>
 
                 <div class="options-panel" id="convert-options" style="display: none; margin-top: 16px;">
-                    <div class="options-title">Opciones de Conversión</div>
+                    <div class="options-title" data-i18n="options_title_conversion">Opciones de Conversión</div>
                     <div class="option-group">
-                        <label>Formato:</label>
+                        <label data-i18n="label_format">Formato:</label>
                         <select id="convert-format">
-                            <option value="image/jpeg">JPG</option>
-                            <option value="image/png">PNG</option>
-                            <option value="image/webp">WebP</option>
+                            <option value="image/jpeg" data-i18n="option_jpg">JPG</option>
+                            <option value="image/png" data-i18n="option_png">PNG</option>
+                            <option value="image/webp" data-i18n="option_webp">WebP</option>
                         </select>
                     </div>
                     <div class="option-group">
-                        <label>Calidad:</label>
+                        <label data-i18n="label_quality">Calidad:</label>
                         <select id="convert-quality">
-                            <option value="1.0">Alta (150 DPI)</option>
-                            <option value="2.0">Muy Alta (300 DPI)</option>
-                            <option value="0.8">Media (Web)</option>
+                            <option value="1.0" data-i18n="option_high_quality">Alta (150 DPI)</option>
+                            <option value="2.0" data-i18n="option_very_high_quality">Muy Alta (300 DPI)</option>
+                            <option value="0.8" data-i18n="option_medium_quality">Media (Web)</option>
                         </select>
                     </div>
                 </div>
@@ -484,9 +486,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
-                        Volver
+                        <span data-i18n="button_back">Volver</span>
                     </button>
-                    <h2 id="create-tool-title">Imágenes a PDF</h2>
+                    <h2 id="create-tool-title" data-i18n="section_images_to_pdf">Imágenes a PDF</h2>
                 </div>
 
                 <div class="drop-zone" id="create-drop-zone">
@@ -497,9 +499,9 @@
                                 <polyline points="14 2 14 8 20 8"></polyline>
                             </svg>
                         </div>
-                        <h3>Sube tus imágenes</h3>
-                        <p>o toca para seleccionar</p>
-                        <button type="button" class="select-files-btn">Seleccionar Imágenes</button>
+                        <h3 data-i18n="upload_images">Sube tus imágenes</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para seleccionar</p>
+                        <button type="button" class="select-files-btn" data-i18n="select_images">Seleccionar Imágenes</button>
                         <input type="file" id="create-file-input" multiple accept="image/*" hidden>
                     </div>
                 </div>
@@ -507,27 +509,27 @@
                 <div class="file-list" id="create-file-list"></div>
 
                 <div class="options-panel" id="create-options" style="display: none; margin-top: 16px;">
-                    <div class="options-title">Opciones del PDF</div>
+                    <div class="options-title" data-i18n="options_title_pdf">Opciones del PDF</div>
                     <div class="option-group">
-                        <label>Tamaño de Página:</label>
+                        <label data-i18n="label_page_size">Tamaño de Página:</label>
                         <select id="create-size">
-                            <option value="a4">A4</option>
-                            <option value="letter">Carta</option>
-                            <option value="auto">Ajustar a Imagen</option>
+                            <option value="a4" data-i18n="option_a4">A4</option>
+                            <option value="letter" data-i18n="option_letter">Carta</option>
+                            <option value="auto" data-i18n="option_auto_fit">Ajustar a Imagen</option>
                         </select>
                     </div>
                     <div class="option-group">
-                        <label>Orientación:</label>
+                        <label data-i18n="label_orientation">Orientación:</label>
                         <select id="create-orientation">
-                            <option value="p">Vertical</option>
-                            <option value="l">Horizontal</option>
+                            <option value="p" data-i18n="option_portrait">Vertical</option>
+                            <option value="l" data-i18n="option_landscape">Horizontal</option>
                         </select>
                     </div>
                     <div class="option-group">
-                        <label>Ajuste:</label>
+                        <label data-i18n="label_fit">Ajuste:</label>
                         <select id="create-fit">
-                            <option value="true">Ajustar a página</option>
-                            <option value="false">Tamaño original</option>
+                            <option value="true" data-i18n="option_fit_to_page">Ajustar a página</option>
+                            <option value="false" data-i18n="option_original_size">Tamaño original</option>
                         </select>
                     </div>
                 </div>
@@ -540,9 +542,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
-                        Volver
+                        <span data-i18n="button_back">Volver</span>
                     </button>
-                    <h2>Rotar PDF</h2>
+                    <h2 data-i18n="tool_rotate_title">Rotar PDF</h2>
                 </div>
 
                 <div class="drop-zone" id="rotate-drop-zone">
@@ -553,9 +555,9 @@
                                 <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
                             </svg>
                         </div>
-                        <h3>Sube el PDF a rotar</h3>
-                        <p>o toca para seleccionar</p>
-                        <button type="button" class="select-files-btn">Seleccionar Archivo</button>
+                        <h3 data-i18n="upload_pdf_to_rotate">Sube el PDF a rotar</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para seleccionar</p>
+                        <button type="button" class="select-files-btn" data-i18n="select_file">Seleccionar Archivo</button>
                         <input type="file" id="rotate-file-input" accept=".pdf" hidden>
                     </div>
                 </div>
@@ -563,24 +565,24 @@
                 <div id="rotate-file-info" class="file-item" style="display: none; margin-top: 16px;"></div>
 
                 <div class="options-panel" id="rotate-options" style="display: none; margin-top: 16px;">
-                    <div class="options-title">Opciones de Rotación</div>
+                    <div class="options-title" data-i18n="options_title_rotation">Opciones de Rotación</div>
                     <div class="option-group">
-                        <label>Ángulo de rotación:</label>
+                        <label data-i18n="label_rotation_angle">Ángulo de rotación:</label>
                         <select id="rotate-angle">
-                            <option value="90">90° (Derecha)</option>
-                            <option value="180">180°</option>
-                            <option value="270">270° (Izquierda)</option>
+                            <option value="90" data-i18n="option_rotate_90">90° (Derecha)</option>
+                            <option value="180" data-i18n="option_rotate_180">180°</option>
+                            <option value="270" data-i18n="option_rotate_270">270° (Izquierda)</option>
                         </select>
                     </div>
                     <div class="option-group">
-                        <label>Aplicar a:</label>
+                        <label data-i18n="label_apply_to">Aplicar a:</label>
                         <select id="rotate-mode">
-                            <option value="all">Todas las páginas</option>
-                            <option value="selected">Páginas específicas</option>
+                            <option value="all" data-i18n="option_all_pages">Todas las páginas</option>
+                            <option value="selected" data-i18n="option_specific_pages">Páginas específicas</option>
                         </select>
                     </div>
                     <div class="option-group" id="rotate-pages-group" style="display: none;">
-                        <label>Páginas (ej: 1, 3, 5-7):</label>
+                        <label data-i18n="label_pages">Páginas (ej: 1, 3, 5-7):</label>
                         <input type="text" id="rotate-pages" placeholder="1, 3, 5-7">
                     </div>
                 </div>
@@ -593,9 +595,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
-                        Volver
+                        <span data-i18n="button_back">Volver</span>
                     </button>
-                    <h2>Marca de Agua</h2>
+                    <h2 data-i18n="tool_watermark_title">Marca de Agua</h2>
                 </div>
 
                 <div class="drop-zone" id="watermark-drop-zone">
@@ -605,9 +607,9 @@
                                 <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
                             </svg>
                         </div>
-                        <h3>Sube el PDF</h3>
-                        <p>o toca para seleccionar</p>
-                        <button type="button" class="select-files-btn">Seleccionar Archivo</button>
+                        <h3 data-i18n="upload_pdf_to_watermark">Sube el PDF</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para seleccionar</p>
+                        <button type="button" class="select-files-btn" data-i18n="select_file">Seleccionar Archivo</button>
                         <input type="file" id="watermark-file-input" accept=".pdf" hidden>
                     </div>
                 </div>
@@ -615,36 +617,36 @@
                 <div id="watermark-file-info" class="file-item" style="display: none; margin-top: 16px;"></div>
 
                 <div class="options-panel" id="watermark-options" style="display: none; margin-top: 16px;">
-                    <div class="options-title">Configurar Marca de Agua</div>
+                    <div class="options-title" data-i18n="options_title_watermark">Configurar Marca de Agua</div>
                     <div class="option-group">
-                        <label>Tipo:</label>
+                        <label data-i18n="label_watermark_type">Tipo:</label>
                         <select id="watermark-type">
-                            <option value="text">Texto</option>
-                            <option value="image">Imagen</option>
+                            <option value="text" data-i18n="option_text">Texto</option>
+                            <option value="image" data-i18n="option_image">Imagen</option>
                         </select>
                     </div>
                     <div id="watermark-text-options">
                         <div class="option-group">
-                            <label>Texto:</label>
-                            <input type="text" id="watermark-text" placeholder="CONFIDENCIAL" value="CONFIDENCIAL">
+                            <label data-i18n="label_watermark_text">Texto:</label>
+                            <input type="text" id="watermark-text" data-i18n-placeholder="default_watermark_text" placeholder="CONFIDENCIAL" value="CONFIDENCIAL">
                         </div>
                         <div class="option-group">
-                            <label>Tamaño de fuente:</label>
+                            <label data-i18n="label_font_size">Tamaño de fuente:</label>
                             <select id="watermark-fontsize">
-                                <option value="24">Pequeño (24px)</option>
-                                <option value="48" selected>Mediano (48px)</option>
-                                <option value="72">Grande (72px)</option>
+                                <option value="24" data-i18n="option_small_font">Pequeño (24px)</option>
+                                <option value="48" selected data-i18n="option_medium_font">Mediano (48px)</option>
+                                <option value="72" data-i18n="option_large_font">Grande (72px)</option>
                             </select>
                         </div>
                     </div>
                     <div id="watermark-image-options" style="display: none;">
                         <div class="option-group">
-                            <label>Imagen de marca:</label>
+                            <label data-i18n="label_watermark_image">Imagen de marca:</label>
                             <input type="file" id="watermark-image-input" accept="image/*">
                         </div>
                     </div>
                     <div class="option-group">
-                        <label>Opacidad:</label>
+                        <label data-i18n="label_opacity">Opacidad:</label>
                         <select id="watermark-opacity">
                             <option value="0.1">10%</option>
                             <option value="0.2">20%</option>
@@ -653,11 +655,11 @@
                         </select>
                     </div>
                     <div class="option-group">
-                        <label>Posición:</label>
+                        <label data-i18n="label_position">Posición:</label>
                         <select id="watermark-position">
-                            <option value="center" selected>Centro (diagonal)</option>
-                            <option value="top">Arriba</option>
-                            <option value="bottom">Abajo</option>
+                            <option value="center" selected data-i18n="option_center_diagonal">Centro (diagonal)</option>
+                            <option value="top" data-i18n="option_top">Arriba</option>
+                            <option value="bottom" data-i18n="option_bottom">Abajo</option>
                         </select>
                     </div>
                 </div>
@@ -670,9 +672,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="15 18 9 12 15 6"></polyline>
                         </svg>
-                        Volver
+                        <span data-i18n="button_back">Volver</span>
                     </button>
-                    <h2>Comprimir PDF</h2>
+                    <h2 data-i18n="tool_compress_title">Comprimir PDF</h2>
                 </div>
 
                 <div class="drop-zone" id="compress-drop-zone">
@@ -685,9 +687,9 @@
                                 <line x1="3" y1="21" x2="10" y2="14"></line>
                             </svg>
                         </div>
-                        <h3>Sube el PDF a comprimir</h3>
-                        <p>o toca para seleccionar</p>
-                        <button type="button" class="select-files-btn">Seleccionar Archivo</button>
+                        <h3 data-i18n="upload_pdf_to_compress">Sube el PDF a comprimir</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para seleccionar</p>
+                        <button type="button" class="select-files-btn" data-i18n="select_file">Seleccionar Archivo</button>
                         <input type="file" id="compress-file-input" accept=".pdf" hidden>
                     </div>
                 </div>
@@ -695,24 +697,37 @@
                 <div id="compress-file-info" class="file-item" style="display: none; margin-top: 16px;"></div>
 
                 <div class="options-panel" id="compress-options" style="display: none; margin-top: 16px;">
-                    <div class="options-title">Opciones de Compresión</div>
+                    <div class="options-title" data-i18n="options_title_compression">Opciones de Compresión</div>
                     <div class="option-group">
-                        <label>Nivel de compresión:</label>
+                        <label data-i18n="label_compression_level">Nivel de compresión:</label>
                         <select id="compress-quality">
-                            <option value="high">Baja (mejor calidad)</option>
-                            <option value="medium" selected>Media (recomendado)</option>
-                            <option value="low">Alta (menor tamaño)</option>
+                            <option value="high" data-i18n="option_low_compression">Baja (mejor calidad)</option>
+                            <option value="medium" selected data-i18n="option_medium_compression">Media (recomendado)</option>
+                            <option value="low" data-i18n="option_high_compression">Alta (menor tamaño)</option>
                         </select>
                     </div>
                     <div class="option-group">
                         <label>
                             <input type="checkbox" id="compress-remove-metadata" checked>
-                            Eliminar metadatos
+                            <span data-i18n="label_remove_metadata">Eliminar metadatos</span>
                         </label>
                     </div>
                     <div id="compress-stats" class="compress-stats" style="display: none;">
-                        <p>Tamaño original: <strong id="compress-original-size">-</strong></p>
+                        <p><span data-i18n="label_original_size">Tamaño original:</span> <strong id="compress-original-size">-</strong></p>
                     </div>
+                </div>
+            </section>
+
+            <!-- Settings Panel (hidden by default) -->
+            <section id="settings-panel" class="view-section" style="display: none;">
+                <div class="tool-header">
+                    <h2 data-i18n="settings_title">Configuración</h2>
+                </div>
+                <div class="settings-content">
+                    <div id="language-selector-container" class="option-group"></div>
+                </div>
+                <div class="settings-footer" style="margin-top: 20px;">
+                    <button class="secondary-btn" id="close-settings-btn" data-i18n="button_back">Volver</button>
                 </div>
             </section>
 
@@ -723,7 +738,7 @@
                 <div class="progress-bar" id="global-progress-bar"></div>
             </div>
             <div class="action-area">
-                <button id="action-btn" class="primary-btn" disabled>Continuar</button>
+                <button id="action-btn" class="primary-btn" disabled data-i18n="button_continue">Continuar</button>
             </div>
             <div id="status-msg" class="status-msg"></div>
         </footer>
@@ -734,6 +749,7 @@
     <script src="../libs/jszip.min.js"></script>
     <script src="../libs/pdf.min.js"></script>
     <script src="../libs/jspdf.umd.min.js"></script>
+    <script src="../utils/i18n.js"></script>
     <script type="module" src="sidebar.js"></script>
 </body>
 
