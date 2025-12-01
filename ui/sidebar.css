@@ -1,0 +1,1232 @@
+/* ============================================
+   PDF Tools Sidebar - Modern Light Theme
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Core Colors - Light Theme */
+    --bg-color: #f8f9fc;
+    --surface-color: #ffffff;
+    --surface-hover: #f3f4f6;
+    --border-color: #e5e7eb;
+    --border-light: #f0f1f3;
+    
+    /* Text Colors */
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    
+    /* Accent Colors */
+    --accent-primary: #3b82f6;
+    --accent-primary-light: #eff6ff;
+    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    /* Tool Colors */
+    --color-merge: #8b5cf6;
+    --color-merge-bg: #f3e8ff;
+    
+    --color-split: #ef4444;
+    --color-split-bg: #fef2f2;
+    
+    --color-rotate: #10b981;
+    --color-rotate-bg: #ecfdf5;
+    
+    --color-watermark: #06b6d4;
+    --color-watermark-bg: #ecfeff;
+    
+    --color-compress: #f59e0b;
+    --color-compress-bg: #fffbeb;
+    
+    --color-pdf-jpg: #3b82f6;
+    --color-pdf-jpg-bg: #eff6ff;
+    
+    --color-pdf-png: #6366f1;
+    --color-pdf-png-bg: #eef2ff;
+    
+    --color-pdf-webp: #ec4899;
+    --color-pdf-webp-bg: #fdf2f8;
+    
+    --color-jpg-pdf: #f97316;
+    --color-jpg-pdf-bg: #fff7ed;
+    
+    /* UI Elements */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-size: 14px;
+    height: 100vh;
+    overflow: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--surface-color);
+}
+
+/* ============================================
+   Header & Navigation
+   ============================================ */
+.app-header {
+    background-color: var(--surface-color);
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+}
+
+.settings-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-btn:hover {
+    background-color: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+.settings-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Tabs Navigation */
+.main-nav {
+    display: flex;
+    gap: 0;
+    background: transparent;
+    border-bottom: 1px solid var(--border-light);
+    margin: 0 -20px;
+    padding: 0 20px;
+}
+
+.nav-tab {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+
+.nav-tab .icon {
+    display: none;
+}
+
+.nav-tab .label {
+    text-transform: uppercase;
+}
+
+.nav-tab:hover {
+    color: var(--text-primary);
+}
+
+.nav-tab.active {
+    color: var(--accent-primary);
+    border-bottom-color: var(--accent-primary);
+}
+
+.nav-tab.active[data-tab="web"] {
+    color: #8b5cf6;
+    border-bottom-color: #8b5cf6;
+}
+
+/* ============================================
+   Main Content Area
+   ============================================ */
+.app-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 20px;
+    position: relative;
+}
+
+.view-section,
+.tool-section {
+    display: none;
+    animation: fadeSlideIn 0.3s ease;
+}
+
+.view-section.active,
+.tool-section.active {
+    display: block;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Welcome Section (Merge Tab)
+   ============================================ */
+.tool-header {
+    margin-bottom: 24px;
+}
+
+.tool-header .welcome-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.tool-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.tool-header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* ============================================
+   Drop Zone
+   ============================================ */
+.drop-zone {
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 40px 24px;
+    text-align: center;
+    background-color: var(--surface-color);
+    transition: var(--transition);
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.drop-zone:hover {
+    border-color: var(--accent-primary);
+    background-color: var(--accent-primary-light);
+}
+
+.drop-zone.drag-over {
+    border-color: var(--accent-primary);
+    background-color: var(--accent-primary-light);
+    transform: scale(1.01);
+}
+
+.drop-icon-container {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-icon-container svg {
+    width: 32px;
+    height: 32px;
+    color: var(--text-secondary);
+}
+
+.drop-icon-large {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.8;
+}
+
+.drop-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.drop-content p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.select-files-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+}
+
+.select-files-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* ============================================
+   Section Titles
+   ============================================ */
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
+
+/* ============================================
+   Tool Grid & Cards
+   ============================================ */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.tool-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.tool-card:hover {
+    border-color: var(--card-color, var(--border-color));
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.tool-card.selected {
+    border-color: var(--card-color);
+    border-width: 2px;
+    background: var(--card-bg, var(--surface-color));
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background-color: var(--card-bg, var(--bg-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--card-color, var(--text-secondary));
+}
+
+.card-icon-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--card-color, var(--text-secondary));
+}
+
+.card-content h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: var(--text-primary);
+}
+
+.card-content p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* ============================================
+   Tool List (Alternative Layout)
+   ============================================ */
+.tool-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tool-list-item {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.tool-list-item:hover {
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.tool-list-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tool-list-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.tool-list-content {
+    flex: 1;
+}
+
+.tool-list-content h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.tool-list-content p {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.tool-list-arrow {
+    color: var(--text-muted);
+}
+
+.tool-list-arrow svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ============================================
+   Tool Interfaces
+   ============================================ */
+.tool-nav-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background-color: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+.back-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.tool-nav-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Split Modes */
+.split-modes {
+    display: flex;
+    background-color: var(--bg-color);
+    padding: 4px;
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+}
+
+.mode-tab {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.mode-tab.active {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+}
+
+.mode-tab:hover:not(.active) {
+    color: var(--text-primary);
+}
+
+/* ============================================
+   File List & Items
+   ============================================ */
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.file-item {
+    background-color: var(--surface-color);
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.file-item:hover {
+    border-color: var(--border-color);
+}
+
+.file-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.file-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-secondary);
+}
+
+.file-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.file-name {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-size {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-btn:hover {
+    background-color: #fef2f2;
+    color: #ef4444;
+}
+
+.file-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.file-action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.file-action-btn:hover {
+    background: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+/* ============================================
+   Recent Files Section
+   ============================================ */
+.recent-section {
+    margin-top: 32px;
+}
+
+.recent-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.recent-file {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.recent-file:hover {
+    background-color: var(--surface-hover);
+}
+
+.recent-file-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recent-file-info {
+    flex: 1;
+}
+
+.recent-file-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.recent-file-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* ============================================
+   Options Panel
+   ============================================ */
+.options-panel {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    margin-top: 20px;
+}
+
+.options-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.option-group {
+    margin-bottom: 16px;
+}
+
+.option-group:last-child {
+    margin-bottom: 0;
+}
+
+.option-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.option-group select,
+.option-group input {
+    width: 100%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    outline: none;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.option-group select:focus,
+.option-group input:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ============================================
+   Footer & Action Area
+   ============================================ */
+.app-footer {
+    background-color: var(--surface-color);
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-light);
+}
+
+.progress-bar-container {
+    height: 4px;
+    background-color: var(--bg-color);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-full);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.action-area {
+    margin-bottom: 8px;
+}
+
+.primary-btn {
+    width: 100%;
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(102, 126, 234, 0.35);
+}
+
+.primary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.primary-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.45);
+}
+
+.primary-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.status-msg {
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-secondary);
+    min-height: 18px;
+}
+
+.status-msg.status-success {
+    color: #10b981;
+}
+
+.status-msg.status-error {
+    color: #ef4444;
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+.app-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.app-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.app-content::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 3px;
+}
+
+.app-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-muted);
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.hidden {
+    display: none !important;
+}
+
+.mt-4 { margin-top: 16px; }
+.mt-6 { margin-top: 24px; }
+.mb-4 { margin-bottom: 16px; }
+.mb-6 { margin-bottom: 24px; }
+
+/* ============================================
+   Featured Tool Card (Webpage to PDF)
+   ============================================ */
+.featured-tool {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    margin-bottom: 24px;
+}
+
+.featured-tool:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.featured-tool-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.featured-tool-icon svg {
+    width: 26px;
+    height: 26px;
+    color: white;
+}
+
+.featured-tool-content {
+    flex: 1;
+}
+
+.featured-tool-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.featured-tool-content p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+}
+
+.featured-tool-arrow {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.featured-tool-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ============================================
+   Webpage to PDF Specific Styles
+   ============================================ */
+.webpage-info-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    text-align: center;
+}
+
+.webpage-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.webpage-loading p {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.webpage-ready {
+    text-align: left;
+}
+
+.webpage-ready-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.webpage-ready-icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.webpage-ready h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    word-break: break-word;
+}
+
+.webpage-ready .webpage-url {
+    font-size: 12px;
+    color: var(--text-muted);
+    word-break: break-all;
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.webpage-ready-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ecfdf5;
+    color: #059669;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.webpage-ready-badge svg {
+    width: 14px;
+    height: 14px;
+}
+
+.webpage-error {
+    color: #ef4444;
+    text-align: center;
+}
+
+.webpage-error-icon {
+    width: 56px;
+    height: 56px;
+    background: #fef2f2;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.webpage-error-icon svg {
+    width: 28px;
+    height: 28px;
+    color: #ef4444;
+}
+
+.webpage-error h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ef4444;
+    margin-bottom: 8px;
+}
+
+.webpage-error p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Restricted Page State */
+.webpage-restricted {
+    text-align: center;
+}
+
+.webpage-restricted-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.webpage-restricted-icon svg {
+    width: 30px;
+    height: 30px;
+    color: #6b7280;
+}
+
+.webpage-restricted h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.webpage-restricted p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.webpage-restricted-hint {
+    display: inline-block;
+    background: #eff6ff;
+    color: #3b82f6;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.webpage-tips-section {
+    margin-top: 24px;
+}
+
+.webpage-tips {
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-radius: var(--radius-sm);
+    padding: 12px;
+}
+
+.webpage-tips p {
+    font-size: 12px;
+    color: #92400e;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.webpage-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.secondary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: var(--surface-color);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 12px 20px;
+    border-radius: var(--radius-full);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.secondary-btn:hover {
+    background: var(--surface-hover);
+    border-color: var(--text-muted);
+}
+
+.secondary-btn svg {
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Compress Stats
+   ============================================ */
+.compress-stats {
+    background: var(--bg-color);
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    margin-top: 12px;
+}
+
+.compress-stats p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.compress-stats strong {
+    color: var(--text-primary);
+}
+
+/* ============================================
+   Checkbox Styling
+   ============================================ */
+.option-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.option-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-primary);
+    cursor: pointer;
+}
+
+/* ============================================
+   Preview Placeholder
+   ============================================ */
+.pdf-preview-area {
+    margin-top: 16px;
+}
+
+.preview-placeholder {
+    background: var(--bg-color);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+@media (max-width: 360px) {
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-tab {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+}
