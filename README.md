@@ -116,3 +116,4 @@ MIT License - Siéntete libre de usar, modificar y distribuir.
 
 **Versión 1.0.0** - Todas las funciones 100% operativas ✅
 
+

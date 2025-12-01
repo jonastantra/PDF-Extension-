@@ -22,6 +22,11 @@ export const PdfToDocxModule = {
             throw new Error('El archivo no es un PDF válido.');
         }
 
+        // Configure PDF.js worker
+        if (window.pdfjsLib) {
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('libs/pdf.worker.min.js');
+        }
+
         PdfToDocxModule.file = file;
         const arrayBuffer = await FileHandler.readFileAsArrayBuffer(file);
         PdfToDocxModule.pdfDoc = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
@@ -327,4 +332,5 @@ export const PdfToDocxModule = {
         PdfToDocxModule.totalPages = 0;
     }
 };
+
 

@@ -296,3 +296,4 @@ if (typeof window !== 'undefined') {
     window.t = I18nModule.t; // Atajo global para traducciones
 }
 
+
