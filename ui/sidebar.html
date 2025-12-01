@@ -28,52 +28,21 @@
                 </button>
             </div>
             <nav class="main-nav">
-                <button class="nav-tab active" data-tab="merge" data-i18n-title="tool_merge_title">
-                    <span class="label" data-i18n="tab_merge">UNIR</span>
+                <button class="nav-tab active" data-tab="convert" data-i18n-title="tab_convert_desc">
+                    <span class="label" data-i18n="tab_convert">CONVERTIR</span>
                 </button>
-                <button class="nav-tab" data-tab="img" data-i18n-title="section_images_to_pdf">
-                    <span class="label" data-i18n="tab_img">IMG</span>
+                <button class="nav-tab" data-tab="edit" data-i18n-title="tab_edit_desc">
+                    <span class="label" data-i18n="tab_edit">EDITAR</span>
                 </button>
-                <button class="nav-tab" data-tab="pdf" data-i18n-title="section_pdf_tools">
-                    <span class="label" data-i18n="tab_pdf">PDF</span>
-                </button>
-                <button class="nav-tab" data-tab="web" data-i18n-title="tool_webpage_title">
-                    <span class="label" data-i18n="tab_web">WEB</span>
+                <button class="nav-tab" data-tab="tools" data-i18n-title="tab_tools_desc">
+                    <span class="label" data-i18n="tab_tools">EXTRAS</span>
                 </button>
             </nav>
         </header>
 
         <main class="app-content">
-            <!-- ==================== TAB: MERGE (Direct Tool) ==================== -->
-            <section id="view-merge" class="view-section active">
-                <div class="tool-header">
-                    <h2 class="welcome-text" data-i18n="welcome_title">¡Bienvenido!</h2>
-                    <p data-i18n="welcome_subtitle">¿Listo para gestionar tus PDFs?</p>
-                </div>
-
-                <div class="drop-zone" id="merge-drop-zone">
-                    <div class="drop-content">
-                        <div class="drop-icon-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="17 8 12 3 7 8"></polyline>
-                                <line x1="12" y1="3" x2="12" y2="15"></line>
-                            </svg>
-                        </div>
-                        <h3 data-i18n="drop_files_here">Arrastra tus archivos aquí</h3>
-                        <p data-i18n="or_tap_to_upload">o toca para subir</p>
-                        <button type="button" class="select-files-btn" id="merge-select-btn" data-i18n="select_files">Seleccionar Archivo(s)</button>
-                        <input type="file" id="merge-file-input" multiple accept=".pdf" hidden>
-                    </div>
-                </div>
-
-                <div class="file-list" id="merge-file-list">
-                    <!-- Files will appear here -->
-                </div>
-            </section>
-
-            <!-- ==================== TAB: IMG (Dashboard) ==================== -->
-            <section id="view-img" class="view-section">
+            <!-- ==================== TAB: CONVERTIR ==================== -->
+            <section id="view-convert" class="view-section active">
                 <div class="section-title" data-i18n="section_pdf_to_images">PDF a Imágenes</div>
                 <div class="tool-grid">
                     <div class="tool-card" data-tool="pdf-to-jpg" style="--card-color: var(--color-pdf-jpg); --card-bg: var(--color-pdf-jpg-bg);">
@@ -151,11 +120,48 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="section-title mt-6" data-i18n="section_web_to_pdf">Web a PDF</div>
+                <div class="tool-grid">
+                    <div class="tool-card" data-tool="webpage" style="--card-color: #059669; --card-bg: #ecfdf5;">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 data-i18n="tool_webpage_title">Página Web a PDF</h3>
+                            <p data-i18n="tool_webpage_description">Convierte la página actual a PDF al instante</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- ==================== TAB: PDF (Dashboard - List Style) ==================== -->
-            <section id="view-pdf" class="view-section">
+            <!-- ==================== TAB: EDITAR ==================== -->
+            <section id="view-edit" class="view-section">
                 <div class="tool-list">
+                    <!-- Unir PDFs -->
+                    <div class="tool-list-item" data-tool="merge" style="--item-color: var(--color-merge); --item-bg: var(--color-merge-bg);">
+                        <div class="tool-list-icon" style="background: var(--color-merge-bg);">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--color-merge)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 16v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2"></path>
+                                <rect x="8" y="2" width="12" height="14" rx="2" ry="2"></rect>
+                            </svg>
+                        </div>
+                        <div class="tool-list-content">
+                            <h3 data-i18n="tool_merge_title">Unir PDFs</h3>
+                            <p data-i18n="tool_merge_description">Combina varios PDFs en un único archivo.</p>
+                        </div>
+                        <div class="tool-list-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Dividir PDF -->
                     <div class="tool-list-item" data-tool="split" style="--item-color: var(--color-split); --item-bg: var(--color-split-bg);">
                         <div class="tool-list-icon" style="background: var(--color-split-bg);">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--color-split)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -177,6 +183,7 @@
                         </div>
                     </div>
                     
+                    <!-- Rotar PDF -->
                     <div class="tool-list-item" data-tool="rotate" style="--item-color: var(--color-rotate); --item-bg: var(--color-rotate-bg);">
                         <div class="tool-list-icon" style="background: var(--color-rotate-bg);">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--color-rotate)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -195,6 +202,7 @@
                         </div>
                     </div>
                     
+                    <!-- Marca de Agua -->
                     <div class="tool-list-item" data-tool="watermark" style="--item-color: var(--color-watermark); --item-bg: var(--color-watermark-bg);">
                         <div class="tool-list-icon" style="background: var(--color-watermark-bg);">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--color-watermark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -212,24 +220,7 @@
                         </div>
                     </div>
                     
-                    <div class="tool-list-item" data-tool="merge-alt" style="--item-color: var(--color-merge); --item-bg: var(--color-merge-bg);">
-                        <div class="tool-list-icon" style="background: var(--color-merge-bg);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--color-merge)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 16v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2"></path>
-                                <rect x="8" y="2" width="12" height="14" rx="2" ry="2"></rect>
-                            </svg>
-                        </div>
-                        <div class="tool-list-content">
-                            <h3 data-i18n="tool_merge_title">Unir PDF</h3>
-                            <p data-i18n="tool_merge_description">Combina varios PDFs en un único archivo.</p>
-                        </div>
-                        <div class="tool-list-arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    
+                    <!-- Comprimir PDF -->
                     <div class="tool-list-item" data-tool="compress" style="--item-color: var(--color-compress); --item-bg: var(--color-compress-bg);">
                         <div class="tool-list-icon" style="background: var(--color-compress-bg);">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--color-compress)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -252,11 +243,77 @@
                 </div>
             </section>
 
-            <!-- ==================== TAB: WEB (Webpage to PDF) ==================== -->
-            <section id="view-web" class="view-section">
+            <!-- ==================== TAB: HERRAMIENTAS / EXTRAS ==================== -->
+            <section id="view-tools" class="view-section">
                 <div class="tool-header">
+                    <h2 data-i18n="tab_tools_title">Herramientas Extras</h2>
+                    <p data-i18n="tab_tools_subtitle">Funciones avanzadas para tus PDFs</p>
+                </div>
+
+                <div class="tools-coming-soon">
+                    <div class="coming-soon-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="coming_soon_title">Próximamente</h3>
+                    <p data-i18n="coming_soon_description">Estamos trabajando en nuevas herramientas para ti:</p>
+                    <ul class="coming-soon-list">
+                        <li data-i18n="coming_soon_1">🔒 Proteger PDF con contraseña</li>
+                        <li data-i18n="coming_soon_2">🔓 Desbloquear PDF</li>
+                        <li data-i18n="coming_soon_3">📷 Extraer imágenes de PDF</li>
+                        <li data-i18n="coming_soon_4">📄 Organizar páginas</li>
+                        <li data-i18n="coming_soon_5">✍️ Firmar PDF</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ==================== SPECIFIC TOOLS INTERFACES ==================== -->
+
+            <!-- TOOL: MERGE PDFs -->
+            <section id="tool-merge" class="tool-section">
+                <div class="tool-nav-header">
+                    <button class="back-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        <span data-i18n="button_back">Volver</span>
+                    </button>
+                    <h2 data-i18n="tool_merge_title">Unir PDFs</h2>
+                </div>
+
+                <div class="drop-zone" id="merge-drop-zone">
+                    <div class="drop-content">
+                        <div class="drop-icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="drop_files_here">Arrastra tus archivos aquí</h3>
+                        <p data-i18n="or_tap_to_upload">o toca para subir</p>
+                        <button type="button" class="select-files-btn" id="merge-select-btn" data-i18n="select_files">Seleccionar Archivo(s)</button>
+                        <input type="file" id="merge-file-input" multiple accept=".pdf" hidden>
+                    </div>
+                </div>
+
+                <div class="file-list" id="merge-file-list">
+                    <!-- Files will appear here -->
+                </div>
+            </section>
+
+            <!-- TOOL: WEBPAGE TO PDF -->
+            <section id="tool-webpage" class="tool-section">
+                <div class="tool-nav-header">
+                    <button class="back-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        <span data-i18n="button_back">Volver</span>
+                    </button>
                     <h2 data-i18n="tool_webpage_title">Página Web a PDF</h2>
-                    <p data-i18n="tool_webpage_description">Convierte la página actual a PDF al instante</p>
                 </div>
 
                 <div class="webpage-info-card" id="webpage-info">
@@ -319,8 +376,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- ==================== SPECIFIC TOOLS INTERFACES ==================== -->
 
             <!-- TOOL: PDF TO DOCX -->
             <section id="tool-pdf-to-docx" class="tool-section">

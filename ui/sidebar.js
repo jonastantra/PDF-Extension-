@@ -25,7 +25,7 @@ const t = (key, substitutions = []) => {
 };
 
 // State
-let currentTab = 'merge'; // merge, img, pdf
+let currentTab = 'convert'; // convert, edit, tools
 let currentTool = null; // specific tool id (e.g., 'pdf-to-jpg')
 let isProcessing = false;
 let settingsOpen = false;
@@ -226,13 +226,8 @@ function switchTab(tabId) {
     const targetView = document.getElementById(`view-${tabId}`);
     if (targetView) targetView.classList.add('active');
 
-    if (tabId === 'merge') {
-        currentTool = 'merge';
+    // Reset action button when switching tabs
         updateActionBtnState();
-    } else if (tabId === 'web') {
-        currentTool = 'webpage';
-        loadWebpageInfo();
-    }
 }
 
 function setupToolCards() {
@@ -247,11 +242,7 @@ function setupToolCards() {
     toolListItems.forEach(item => {
         item.addEventListener('click', () => {
             const toolId = item.dataset.tool;
-            if (toolId === 'merge-alt') {
-                switchTab('merge');
-            } else {
-                openTool(toolId);
-            }
+            openTool(toolId);
         });
     });
 
@@ -280,6 +271,11 @@ function openTool(toolId) {
         sectionId = 'tool-watermark';
     } else if (toolId === 'compress') {
         sectionId = 'tool-compress';
+    } else if (toolId === 'webpage') {
+        sectionId = 'tool-webpage';
+        loadWebpageInfo();
+    } else if (toolId === 'merge') {
+        sectionId = 'tool-merge';
     } else {
         sectionId = `tool-${toolId}`;
     }
@@ -524,7 +520,7 @@ async function handleSplitFile(file) {
     try {
         const info = await SplitModule.setFile(file);
         showSplitFileInfo(info);
-        updateActionBtnState();
+    updateActionBtnState();
     } catch (error) {
         showStatus(error.message, 'error');
     }
@@ -542,10 +538,10 @@ function showSplitFileInfo(info) {
                     <polyline points="14 2 14 8 20 8"></polyline>
                 </svg>
             </div>
-            <div class="file-info">
+      <div class="file-info">
                 <span class="file-name">${info.name}</span>
                 <span class="file-size">${t('pages_count', [info.pages])}</span>
-            </div>
+      </div>
         </div>
         <div class="options-panel" style="margin-top: 16px;">
             <div class="option-group" id="split-ranges-input">
@@ -677,8 +673,8 @@ function renderRotateFileInfo(info) {
     document.getElementById('remove-rotate-file').addEventListener('click', () => {
         RotateModule.reset();
         resetRotateUI();
-        updateActionBtnState();
-    });
+            updateActionBtnState();
+        });
 }
 
 function resetRotateUI() {

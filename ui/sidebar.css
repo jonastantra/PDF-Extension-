@@ -1399,6 +1399,80 @@ body {
 }
 
 /* ============================================
+   Coming Soon Section (Tools Tab)
+   ============================================ */
+.tools-coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f8f9fc 0%, #eef2ff 100%);
+    border-radius: var(--radius-lg);
+    margin: 20px 0;
+}
+
+.coming-soon-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, #8b5cf6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.coming-soon-icon svg {
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+
+.tools-coming-soon h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.tools-coming-soon > p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.coming-soon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    max-width: 280px;
+}
+
+.coming-soon-list li {
+    padding: 12px 16px;
+    background: white;
+    border-radius: var(--radius-md);
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.coming-soon-list li:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+}
+
+.coming-soon-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
    Responsive Adjustments
    ============================================ */
 @media (max-width: 360px) {

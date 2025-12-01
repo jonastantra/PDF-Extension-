@@ -13,21 +13,69 @@
     "description": "Título de la aplicación"
   },
 
-  "tab_merge": {
-    "message": "UNIR",
-    "description": "Tab para unir PDFs"
+  "tab_convert": {
+    "message": "CONVERTIR",
+    "description": "Tab para conversiones"
   },
-  "tab_img": {
-    "message": "IMG",
-    "description": "Tab para conversiones de imagen"
+  "tab_convert_desc": {
+    "message": "Convierte entre formatos",
+    "description": "Descripción tab convertir"
   },
-  "tab_pdf": {
-    "message": "PDF",
-    "description": "Tab para herramientas PDF"
+  "tab_edit": {
+    "message": "EDITAR",
+    "description": "Tab para editar PDFs"
   },
-  "tab_web": {
-    "message": "WEB",
-    "description": "Tab para página web a PDF"
+  "tab_edit_desc": {
+    "message": "Modifica tus PDFs",
+    "description": "Descripción tab editar"
+  },
+  "tab_tools": {
+    "message": "EXTRAS",
+    "description": "Tab para herramientas extra"
+  },
+  "tab_tools_desc": {
+    "message": "Funciones avanzadas",
+    "description": "Descripción tab extras"
+  },
+  "tab_tools_title": {
+    "message": "Herramientas Extras",
+    "description": "Título sección herramientas"
+  },
+  "tab_tools_subtitle": {
+    "message": "Funciones avanzadas para tus PDFs",
+    "description": "Subtítulo sección herramientas"
+  },
+  "section_web_to_pdf": {
+    "message": "Web a PDF",
+    "description": "Sección web a PDF"
+  },
+  "coming_soon_title": {
+    "message": "Próximamente",
+    "description": "Título próximamente"
+  },
+  "coming_soon_description": {
+    "message": "Estamos trabajando en nuevas herramientas para ti:",
+    "description": "Descripción próximamente"
+  },
+  "coming_soon_1": {
+    "message": "🔒 Proteger PDF con contraseña",
+    "description": "Función próxima 1"
+  },
+  "coming_soon_2": {
+    "message": "🔓 Desbloquear PDF",
+    "description": "Función próxima 2"
+  },
+  "coming_soon_3": {
+    "message": "📷 Extraer imágenes de PDF",
+    "description": "Función próxima 3"
+  },
+  "coming_soon_4": {
+    "message": "📄 Organizar páginas",
+    "description": "Función próxima 4"
+  },
+  "coming_soon_5": {
+    "message": "✍️ Firmar PDF",
+    "description": "Función próxima 5"
   },
 
   "welcome_title": {

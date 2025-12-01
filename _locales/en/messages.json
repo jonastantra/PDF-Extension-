@@ -13,21 +13,69 @@
     "description": "App title"
   },
 
-  "tab_merge": {
-    "message": "MERGE",
-    "description": "Merge PDFs tab"
+  "tab_convert": {
+    "message": "CONVERT",
+    "description": "Conversions tab"
   },
-  "tab_img": {
-    "message": "IMG",
-    "description": "Image conversions tab"
+  "tab_convert_desc": {
+    "message": "Convert between formats",
+    "description": "Convert tab description"
   },
-  "tab_pdf": {
-    "message": "PDF",
-    "description": "PDF tools tab"
+  "tab_edit": {
+    "message": "EDIT",
+    "description": "Edit PDFs tab"
   },
-  "tab_web": {
-    "message": "WEB",
-    "description": "Webpage to PDF tab"
+  "tab_edit_desc": {
+    "message": "Modify your PDFs",
+    "description": "Edit tab description"
+  },
+  "tab_tools": {
+    "message": "EXTRAS",
+    "description": "Extra tools tab"
+  },
+  "tab_tools_desc": {
+    "message": "Advanced features",
+    "description": "Extras tab description"
+  },
+  "tab_tools_title": {
+    "message": "Extra Tools",
+    "description": "Tools section title"
+  },
+  "tab_tools_subtitle": {
+    "message": "Advanced features for your PDFs",
+    "description": "Tools section subtitle"
+  },
+  "section_web_to_pdf": {
+    "message": "Web to PDF",
+    "description": "Web to PDF section"
+  },
+  "coming_soon_title": {
+    "message": "Coming Soon",
+    "description": "Coming soon title"
+  },
+  "coming_soon_description": {
+    "message": "We're working on new tools for you:",
+    "description": "Coming soon description"
+  },
+  "coming_soon_1": {
+    "message": "🔒 Password protect PDF",
+    "description": "Coming feature 1"
+  },
+  "coming_soon_2": {
+    "message": "🔓 Unlock PDF",
+    "description": "Coming feature 2"
+  },
+  "coming_soon_3": {
+    "message": "📷 Extract images from PDF",
+    "description": "Coming feature 3"
+  },
+  "coming_soon_4": {
+    "message": "📄 Organize pages",
+    "description": "Coming feature 4"
+  },
+  "coming_soon_5": {
+    "message": "✍️ Sign PDF",
+    "description": "Coming feature 5"
   },
 
   "welcome_title": {
