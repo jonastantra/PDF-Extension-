@@ -100,6 +100,26 @@
                     </div>
                 </div>
 
+                <div class="section-title mt-6">PDF a Documentos</div>
+                <div class="tool-grid">
+                    <div class="tool-card featured-card" data-tool="pdf-to-docx" style="--card-color: #2563eb; --card-bg: #eff6ff;">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3>PDF a Word</h3>
+                            <p>Convierte PDF a documento DOCX editable.</p>
+                        </div>
+                        <span class="card-badge">Popular</span>
+                    </div>
+                </div>
+
                 <div class="section-title mt-6">Imágenes a PDF</div>
                 <div class="tool-grid">
                     <div class="tool-card" data-tool="jpg-to-pdf" style="--card-color: var(--color-jpg-pdf); --card-bg: var(--color-jpg-pdf-bg);">
@@ -297,6 +317,68 @@
             </section>
 
             <!-- ==================== SPECIFIC TOOLS INTERFACES ==================== -->
+
+            <!-- TOOL: PDF TO DOCX -->
+            <section id="tool-pdf-to-docx" class="tool-section">
+                <div class="tool-nav-header">
+                    <button class="back-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        Volver
+                    </button>
+                    <h2>PDF a Word</h2>
+                </div>
+
+                <div class="drop-zone" id="docx-drop-zone">
+                    <div class="drop-content">
+                        <div class="drop-icon-container docx-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Sube tu PDF</h3>
+                        <p>Arrastra o selecciona el archivo a convertir</p>
+                        <button type="button" class="select-files-btn">Seleccionar PDF</button>
+                        <input type="file" id="docx-file-input" accept=".pdf" hidden>
+                    </div>
+                </div>
+
+                <div id="docx-file-info" class="file-item" style="display: none; margin-top: 16px;"></div>
+
+                <div class="docx-features" id="docx-features" style="display: none; margin-top: 20px;">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Extrae todo el texto del PDF</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Mantiene la estructura por páginas</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Archivo DOCX editable en Word</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Conversión 100% local y privada</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- TOOL: SPLIT PDF -->
             <section id="tool-split" class="tool-section">

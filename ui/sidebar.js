@@ -6,6 +6,7 @@ import { RotateModule } from '../modules/rotate.js';
 import { WatermarkModule } from '../modules/watermark.js';
 import { CompressModule } from '../modules/compress.js';
 import { WebpageModule } from '../modules/webpage.js';
+import { PdfToDocxModule } from '../modules/pdf-to-docx.js';
 import { FileHandler } from '../utils/file-handler.js';
 import { Logger } from '../utils/logger.js';
 
@@ -75,6 +76,12 @@ const webpageInfo = document.getElementById('webpage-info');
 const webpageOptions = document.getElementById('webpage-options');
 const webpageActions = document.getElementById('webpage-actions');
 
+// PDF to DOCX Specific Elements
+const docxDropZone = document.getElementById('docx-drop-zone');
+const docxFileInput = document.getElementById('docx-file-input');
+const docxFileInfo = document.getElementById('docx-file-info');
+const docxFeatures = document.getElementById('docx-features');
+
 // Initialize
 function init() {
     setupNavigation();
@@ -90,6 +97,7 @@ function init() {
     setupWatermarkTool();
     setupCompressTool();
     setupWebpageTool();
+    setupDocxTool();
 
     setupActionBtn();
     Logger.info('Sidebar Initialized with All Tools');
@@ -155,7 +163,9 @@ function openTool(toolId) {
 
     let sectionId = '';
 
-    if (toolId.startsWith('pdf-to-')) {
+    if (toolId === 'pdf-to-docx') {
+        sectionId = 'tool-pdf-to-docx';
+    } else if (toolId.startsWith('pdf-to-')) {
         sectionId = 'tool-convert';
         configureConvertTool(toolId);
     } else if (toolId.endsWith('-to-pdf')) {
@@ -302,10 +312,10 @@ function renderConvertFileInfo(info) {
                 <polyline points="14 2 14 8 20 8"></polyline>
             </svg>
         </div>
-        <div class="file-info">
-            <span class="file-name" title="${info.name}">${info.name}</span>
-            <span class="file-size">${info.pages} páginas</span>
-        </div>
+      <div class="file-info">
+        <span class="file-name" title="${info.name}">${info.name}</span>
+        <span class="file-size">${info.pages} páginas</span>
+      </div>
         <button class="remove-btn" id="remove-convert-file">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -362,17 +372,17 @@ function renderCreateFileList() {
                     <polyline points="21 15 16 10 5 21"></polyline>
                 </svg>
             </div>
-            <div class="file-info">
-                <span class="file-name" title="${file.name}">${file.name}</span>
-                <span class="file-size">${FileHandler.formatSize(file.size)}</span>
-            </div>
+      <div class="file-info">
+        <span class="file-name" title="${file.name}">${file.name}</span>
+        <span class="file-size">${FileHandler.formatSize(file.size)}</span>
+      </div>
             <button class="remove-btn" data-index="${index}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-        `;
+    `;
 
         item.querySelector('.remove-btn').addEventListener('click', (e) => {
             e.stopPropagation();
@@ -716,7 +726,7 @@ async function handleCompressFile(file) {
     try {
         const info = await CompressModule.setFile(file);
         renderCompressFileInfo(info);
-        updateActionBtnState();
+    updateActionBtnState();
     } catch (error) {
         showStatus(error.message, 'error');
     }
@@ -734,10 +744,10 @@ function renderCompressFileInfo(info) {
                 <polyline points="14 2 14 8 20 8"></polyline>
             </svg>
         </div>
-        <div class="file-info">
+      <div class="file-info">
             <span class="file-name">${info.name}</span>
             <span class="file-size">${info.pages} páginas • ${info.formattedSize}</span>
-        </div>
+      </div>
         <button class="remove-btn" id="remove-compress-file">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -757,8 +767,8 @@ function renderCompressFileInfo(info) {
     document.getElementById('remove-compress-file').addEventListener('click', () => {
         CompressModule.reset();
         resetCompressUI();
-        updateActionBtnState();
-    });
+            updateActionBtnState();
+        });
 }
 
 function resetCompressUI() {
@@ -768,6 +778,64 @@ function resetCompressUI() {
     compressFileInput.value = '';
     const statsDiv = document.getElementById('compress-stats');
     if (statsDiv) statsDiv.style.display = 'none';
+}
+
+// ==================== PDF TO DOCX TOOL ====================
+function setupDocxTool() {
+    if (!docxDropZone || !docxFileInput) return;
+
+    setupDropZone(docxDropZone, docxFileInput, (files) => handleDocxFile(files[0]));
+
+    docxFileInput.addEventListener('change', (e) => handleDocxFile(e.target.files[0]));
+}
+
+async function handleDocxFile(file) {
+    if (!file) return;
+    try {
+        const info = await PdfToDocxModule.setFile(file);
+        renderDocxFileInfo(info);
+        updateActionBtnState();
+    } catch (error) {
+        showStatus(error.message, 'error');
+    }
+}
+
+function renderDocxFileInfo(info) {
+    docxDropZone.style.display = 'none';
+    docxFileInfo.style.display = 'flex';
+    if (docxFeatures) docxFeatures.style.display = 'block';
+
+    docxFileInfo.innerHTML = `
+        <div class="file-icon" style="background: #eff6ff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+        </div>
+        <div class="file-info">
+            <span class="file-name">${info.name}</span>
+            <span class="file-size">${info.pages} páginas</span>
+        </div>
+        <button class="remove-btn" id="remove-docx-file">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    `;
+
+    document.getElementById('remove-docx-file').addEventListener('click', () => {
+        PdfToDocxModule.reset();
+        resetDocxUI();
+        updateActionBtnState();
+    });
+}
+
+function resetDocxUI() {
+    docxDropZone.style.display = 'block';
+    docxFileInfo.style.display = 'none';
+    if (docxFeatures) docxFeatures.style.display = 'none';
+    docxFileInput.value = '';
 }
 
 // ==================== WEBPAGE TOOL ====================
@@ -958,6 +1026,9 @@ function updateActionBtnState() {
     } else if (currentTool === 'webpage') {
         actionBtn.disabled = !WebpageModule.pageInfo;
         actionBtn.textContent = 'Convertir a PDF';
+    } else if (currentTool === 'pdf-to-docx') {
+        actionBtn.disabled = !PdfToDocxModule.pdfDoc;
+        actionBtn.textContent = 'Convertir a Word';
     } else {
         actionBtn.disabled = true;
         actionBtn.textContent = 'Procesar';
@@ -985,6 +1056,8 @@ function setupActionBtn() {
             await runCompress();
         } else if (currentTool === 'webpage') {
             await runWebpage();
+        } else if (currentTool === 'pdf-to-docx') {
+            await runDocx();
         }
     });
 }
@@ -1100,6 +1173,21 @@ async function runWebpage() {
 
         downloadFile(result.blob, result.filename);
         showStatus('¡Página convertida a PDF!', 'success');
+    } catch (error) {
+        showStatus('Error: ' + error.message, 'error');
+    } finally {
+        stopProcessing();
+    }
+}
+
+async function runDocx() {
+    startProcessing();
+    try {
+        const blob = await PdfToDocxModule.process(updateProgress);
+        const originalName = PdfToDocxModule.file?.name || 'document';
+        const baseName = originalName.replace(/\.pdf$/i, '');
+        downloadFile(blob, `${baseName}.docx`);
+        showStatus('¡Convertido a Word exitosamente!', 'success');
     } catch (error) {
         showStatus('Error: ' + error.message, 'error');
     } finally {

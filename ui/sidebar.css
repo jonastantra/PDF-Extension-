@@ -1113,6 +1113,65 @@ body {
     font-weight: 500;
 }
 
+/* ============================================
+   PDF to DOCX Specific Styles
+   ============================================ */
+.featured-card {
+    position: relative;
+    border: 2px solid var(--card-color) !important;
+    background: linear-gradient(135deg, var(--card-bg) 0%, white 100%) !important;
+}
+
+.card-badge {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.drop-icon-container.docx-icon {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.drop-icon-container.docx-icon svg {
+    color: white;
+}
+
+.docx-features {
+    background: var(--surface-color);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 20px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.feature-item svg {
+    width: 18px;
+    height: 18px;
+    color: #10b981;
+    flex-shrink: 0;
+}
+
 .webpage-tips-section {
     margin-top: 24px;
 }
