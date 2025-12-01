@@ -18,18 +18,27 @@ export const PdfToDocxModule = {
     },
 
     setFile: async (file) => {
+        Logger.info('PdfToDocxModule.setFile called with:', file?.name);
+        
         if (!FileHandler.isPDF(file)) {
             throw new Error('El archivo no es un PDF válido.');
         }
 
-        // Configure PDF.js worker
-        if (window.pdfjsLib) {
-            window.pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('libs/pdf.worker.min.js');
+        // Verify PDF.js is available
+        if (!window.pdfjsLib) {
+            throw new Error('PDF.js library not loaded');
         }
+
+        // Configure PDF.js worker
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('libs/pdf.worker.min.js');
+        Logger.info('PDF.js worker configured');
 
         PdfToDocxModule.file = file;
         const arrayBuffer = await FileHandler.readFileAsArrayBuffer(file);
-        PdfToDocxModule.pdfDoc = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+        Logger.info('File read as ArrayBuffer, size:', arrayBuffer.byteLength);
+        
+        const loadingTask = window.pdfjsLib.getDocument({ data: arrayBuffer });
+        PdfToDocxModule.pdfDoc = await loadingTask.promise;
         PdfToDocxModule.totalPages = PdfToDocxModule.pdfDoc.numPages;
 
         Logger.info(`PDF Loaded for DOCX conversion. Pages: ${PdfToDocxModule.totalPages}`);

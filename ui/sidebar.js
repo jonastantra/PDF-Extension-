@@ -888,12 +888,22 @@ function setupDocxTool() {
 
 async function handleDocxFile(file) {
     if (!file) return;
+    
+    Logger.info('Loading PDF for DOCX conversion:', file.name);
+    
     try {
+        // Verify pdfjsLib is available
+        if (!window.pdfjsLib) {
+            throw new Error('PDF.js no está disponible. Recarga la extensión.');
+        }
+        
         const info = await PdfToDocxModule.setFile(file);
+        Logger.info('PDF loaded successfully:', info);
         renderDocxFileInfo(info);
         updateActionBtnState();
     } catch (error) {
-        showStatus(error.message, 'error');
+        Logger.error('Error loading PDF for DOCX:', error);
+        showStatus(error.message || 'Error al cargar el PDF', 'error');
     }
 }
 
@@ -1102,6 +1112,10 @@ function updateActionBtnState() {
     if (currentTool === 'merge') {
         actionBtn.disabled = MergeModule.files.length < 2;
         actionBtn.textContent = t('button_merge_pdfs');
+    } else if (currentTool === 'pdf-to-docx') {
+        // IMPORTANT: Check pdf-to-docx BEFORE generic pdf-to-* pattern
+        actionBtn.disabled = !PdfToDocxModule.pdfDoc;
+        actionBtn.textContent = t('button_convert_to_word');
     } else if (currentTool && currentTool.startsWith('pdf-to-')) {
         actionBtn.disabled = !ConvertModule.file;
         actionBtn.textContent = t('button_convert');
@@ -1123,9 +1137,6 @@ function updateActionBtnState() {
     } else if (currentTool === 'webpage') {
         actionBtn.disabled = !WebpageModule.pageInfo;
         actionBtn.textContent = t('button_convert_to_pdf');
-    } else if (currentTool === 'pdf-to-docx') {
-        actionBtn.disabled = !PdfToDocxModule.pdfDoc;
-        actionBtn.textContent = t('button_convert_to_word');
     } else {
         actionBtn.disabled = true;
         actionBtn.textContent = t('button_process');
@@ -1139,6 +1150,9 @@ function setupActionBtn() {
 
         if (currentTool === 'merge') {
             await runMerge();
+        } else if (currentTool === 'pdf-to-docx') {
+            // IMPORTANT: Check pdf-to-docx BEFORE generic pdf-to-* pattern
+            await runDocx();
         } else if (currentTool && currentTool.startsWith('pdf-to-')) {
             await runConvert();
         } else if (currentTool && currentTool.endsWith('-to-pdf')) {
@@ -1153,8 +1167,6 @@ function setupActionBtn() {
             await runCompress();
         } else if (currentTool === 'webpage') {
             await runWebpage();
-        } else if (currentTool === 'pdf-to-docx') {
-            await runDocx();
         }
     });
 }
