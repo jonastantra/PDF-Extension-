@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "PDF Tools - All in One",
+    "message": "Ultimate PDF: All-in-One Editor",
     "description": "Extension name"
   },
   "extensionDescription": {
@@ -9,7 +9,7 @@
   },
 
   "app_title": {
-    "message": "PDF Tools",
+    "message": "Ultimate PDF",
     "description": "App title"
   },
 
@@ -224,7 +224,7 @@
     "description": "Images to PDF section"
   },
   "section_pdf_tools": {
-    "message": "PDF Tools",
+    "message": "PDF Editing Tools",
     "description": "PDF tools section"
   },
 

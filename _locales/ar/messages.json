@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "أدوات PDF - الكل في واحد" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "تحويل ودمج وتقسيم وتدوير وضغط ملفات PDF والمزيد. محلي 100% وخاص." },
-  "app_title": { "message": "أدوات PDF" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "دمج" },
   "tab_img": { "message": "صورة" },
   "tab_pdf": { "message": "PDF" },

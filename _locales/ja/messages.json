@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "PDFツール - オールインワン" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "PDF変換、結合、分割、回転、圧縮など。100%ローカル処理でプライベート。" },
-  "app_title": { "message": "PDFツール" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "結合" },
   "tab_img": { "message": "画像" },
   "tab_pdf": { "message": "PDF" },

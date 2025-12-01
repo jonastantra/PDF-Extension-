@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "PDF工具 - 多合一" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "转换、合并、分割、旋转、压缩PDF等。100%本地处理，安全私密。" },
-  "app_title": { "message": "PDF工具" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "合并" },
   "tab_img": { "message": "图片" },
   "tab_pdf": { "message": "PDF" },

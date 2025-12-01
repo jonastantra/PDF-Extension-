@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "PDF Tools - Alles in Één" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "Converteer, voeg samen, splits, roteer, comprimeer PDF's en meer. 100% lokaal en privé." },
-  "app_title": { "message": "PDF Tools" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "SAMENVOEGEN" },
   "tab_img": { "message": "AFBEELDING" },
   "tab_pdf": { "message": "PDF" },
@@ -32,7 +32,7 @@
   "section_pdf_to_images": { "message": "PDF naar Afbeeldingen" },
   "section_pdf_to_documents": { "message": "PDF naar Documenten" },
   "section_images_to_pdf": { "message": "Afbeeldingen naar PDF" },
-  "section_pdf_tools": { "message": "PDF Tools" },
+  "section_pdf_tools": { "message": "PDF Gereedschappen" },
   "button_back": { "message": "Terug" },
   "button_process": { "message": "Verwerken" },
   "button_continue": { "message": "Doorgaan" },

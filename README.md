@@ -1,44 +1,47 @@
-# 📄 PDF Tools Extension - v1.0.0 ✅ 100% Funcional
+# 📄 Ultimate PDF: All-in-One Editor - v1.2.0 ✅ 100% Funcional
 
 Una extensión de Chrome todo-en-uno para gestionar archivos PDF directamente desde el navegador. Interfaz moderna, rápida y completamente local (sin subir archivos a ningún servidor).
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![Status](https://img.shields.io/badge/status-100%25%20funcional-brightgreen)
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-orange)
+![Languages](https://img.shields.io/badge/idiomas-14-purple)
 
 ## ✨ Características
 
-### 📚 Tab UNIR
-- **Unir PDFs**: Combina múltiples archivos PDF en uno solo
-- Drag & drop o selección de archivos
-- Vista previa de archivos agregados
-- Reordenamiento de archivos
-
-### 🖼️ Tab IMG
+### 📄 Tab CONVERTIR
 - **PDF a JPG**: Convierte páginas PDF a imágenes JPG
 - **PDF a PNG**: Convierte páginas PDF a imágenes PNG de alta calidad
+- **PDF a Word**: Convierte PDF a documento DOCX editable
 - **JPG a PDF**: Crea un PDF desde imágenes JPG
 - **PNG a PDF**: Crea un PDF desde imágenes PNG
+- **Página Web a PDF**: Captura cualquier página web como PDF
 - Opciones de calidad y formato
 
-### 📝 Tab PDF
+### ✏️ Tab EDITAR
+- **Unir PDFs**: Combina múltiples archivos PDF en uno solo
 - **Dividir PDF**: Separa páginas por rangos, extrae específicas, divide cada N páginas
 - **Rotar PDF**: Gira todas las páginas o páginas específicas (90°, 180°, 270°)
 - **Marca de Agua**: Añade texto o imagen como marca de agua con opacidad configurable
 - **Comprimir PDF**: Reduce el tamaño del archivo con diferentes niveles de compresión
 
-### 🌐 Tab WEB
-- **Página Web a PDF**: Captura la página web actual y la convierte a PDF
-- Captura del área visible o página completa (scroll)
-- Configuración de tamaño, orientación y márgenes
-- Alternativa: usar diálogo de impresión de Chrome
+### 🔧 Tab EXTRAS (Próximamente)
+- 🔒 Proteger PDF con contraseña
+- 🔓 Desbloquear PDF
+- 📷 Extraer imágenes de PDF
+- 📄 Organizar páginas
+- ✍️ Firmar PDF
+
+## 🌍 Idiomas Soportados (14)
+
+Español, English, 中文, हिन्दी, العربية, Português, Русский, 日本語, Deutsch, Français, 한국어, Italiano, Türkçe, Nederlands
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **PDF-lib**: Manipulación de PDFs (unir, dividir, rotar, comprimir)
 - **PDF.js**: Renderizado de PDFs para conversión a imágenes
 - **jsPDF**: Creación de PDFs desde imágenes
-- **JSZip**: Generación de archivos ZIP para múltiples archivos
+- **JSZip**: Generación de archivos ZIP y DOCX
 
 ## 📦 Instalación
 
@@ -60,7 +63,8 @@ Una extensión de Chrome todo-en-uno para gestionar archivos PDF directamente de
 ## 📁 Estructura del Proyecto
 
 ```
-PDF EXTENSION/
+Ultimate PDF Extension/
+├── _locales/            # Traducciones (14 idiomas)
 ├── assets/              # Iconos de la extensión
 ├── core/
 │   └── background.js    # Service worker
@@ -75,6 +79,7 @@ PDF EXTENSION/
 │   ├── convert.js       # Conversión PDF a imagen
 │   ├── create.js        # Creación de PDF desde imágenes
 │   ├── merge.js         # Unión de PDFs
+│   ├── pdf-to-docx.js   # Conversión a Word
 │   ├── rotate.js        # Rotación de PDFs
 │   ├── split.js         # División de PDFs
 │   ├── watermark.js     # Marca de agua
@@ -85,6 +90,7 @@ PDF EXTENSION/
 │   └── sidebar.js       # Lógica de la UI
 ├── utils/
 │   ├── file-handler.js  # Utilidades de archivos
+│   ├── i18n.js          # Sistema de internacionalización
 │   └── logger.js        # Sistema de logging
 └── manifest.json        # Configuración de la extensión
 ```
@@ -94,6 +100,7 @@ PDF EXTENSION/
 - **100% Local**: Todos los archivos se procesan en tu navegador
 - **Sin servidores**: No se envían datos a ningún servidor externo
 - **Seguro**: Tus documentos nunca salen de tu dispositivo
+- **Sin registro**: No se requiere cuenta ni login
 
 ## 📋 Requisitos
 
@@ -103,10 +110,11 @@ PDF EXTENSION/
 ## 🎨 Diseño
 
 - Interfaz moderna con tema claro
-- Fuente: Plus Jakarta Sans
+- Fuente: Noto Sans (soporte multi-idioma)
 - Colores de acento con gradientes
 - Iconos SVG personalizados
 - Animaciones suaves
+- Soporte RTL para árabe
 
 ## 📝 Licencia
 
@@ -114,6 +122,6 @@ MIT License - Siéntete libre de usar, modificar y distribuir.
 
 ---
 
-**Versión 1.0.0** - Todas las funciones 100% operativas ✅
+**Versión 1.2.0** - Todas las funciones 100% operativas ✅
 
-
+🌐 Soporta 14 idiomas | 📄 11 herramientas PDF | 🔒 100% privado

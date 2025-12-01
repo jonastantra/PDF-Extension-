@@ -1,10 +1,10 @@
-# PDF Tools All-in-One - Documentación para Chrome Web Store
+# Ultimate PDF: All-in-One Editor - Documentación para Chrome Web Store
 
 ## 📋 Información General de la Extensión
 
 | Campo | Valor |
 |-------|-------|
-| **Nombre** | PDF Tools All-in-One / Herramientas PDF Todo-en-Uno |
+| **Nombre** | Ultimate PDF: All-in-One Editor |
 | **Versión** | 1.1.0 |
 | **Manifest Version** | 3 |
 | **Categoría sugerida** | Productividad / Herramientas de oficina |
@@ -162,7 +162,7 @@ Funciones en desarrollo:
 ## 🔒 Política de Privacidad
 
 ### Resumen Ejecutivo
-**PDF Tools All-in-One NO recopila, almacena, ni transmite ningún dato personal del usuario ni el contenido de sus archivos.**
+**Ultimate PDF: All-in-One Editor NO recopila, almacena, ni transmite ningún dato personal del usuario ni el contenido de sus archivos.**
 
 ### Declaración Completa de Privacidad
 
@@ -232,9 +232,9 @@ Convierte, une, divide y edita PDFs 100% localmente. Sin subir archivos. Privaci
 ### Descripción Larga
 
 ```
-🔧 HERRAMIENTAS PDF TODO-EN-UNO - Tu suite completa de PDF, 100% privada
+🔧 ULTIMATE PDF: ALL-IN-ONE EDITOR - Tu suite completa de PDF, 100% privada
 
-¿Necesitas trabajar con PDFs sin preocuparte por tu privacidad? PDF Tools All-in-One es la solución perfecta. Todas las operaciones se realizan LOCALMENTE en tu navegador. Tus archivos NUNCA salen de tu computadora.
+¿Necesitas trabajar con PDFs sin preocuparte por tu privacidad? Ultimate PDF es la solución perfecta. Todas las operaciones se realizan LOCALMENTE en tu navegador. Tus archivos NUNCA salen de tu computadora.
 
 ✨ CARACTERÍSTICAS PRINCIPALES
 
@@ -283,7 +283,7 @@ Español, English, 中文, हिन्दी, العربية, Português, Ру�
 • Política de seguridad de contenido estricta
 • Sin ejecución de código remoto
 
-Descarga PDF Tools All-in-One y toma el control de tus documentos PDF con total privacidad.
+Descarga Ultimate PDF: All-in-One Editor y toma el control de tus documentos PDF con total privacidad.
 
 ---
 Privacidad: Tus archivos nunca salen de tu dispositivo.
@@ -360,5 +360,5 @@ Crear capturas de:
 
 ---
 
-*Documento generado para asistir en la publicación de la extensión PDF Tools All-in-One en Chrome Web Store.*
+*Documento generado para asistir en la publicación de la extensión Ultimate PDF: All-in-One Editor en Chrome Web Store.*
 

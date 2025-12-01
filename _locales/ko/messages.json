@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "PDF 도구 - 올인원" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "PDF 변환, 병합, 분할, 회전, 압축 등. 100% 로컬 처리로 개인정보 보호." },
-  "app_title": { "message": "PDF 도구" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "병합" },
   "tab_img": { "message": "이미지" },
   "tab_pdf": { "message": "PDF" },

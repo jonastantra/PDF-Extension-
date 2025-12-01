@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "PDF Инструменты - Всё в Одном" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "Конвертируйте, объединяйте, разделяйте, вращайте, сжимайте PDF и многое другое. 100% локально и конфиденциально." },
-  "app_title": { "message": "PDF Инструменты" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "ОБЪЕДИНИТЬ" },
   "tab_img": { "message": "ИЗОБР" },
   "tab_pdf": { "message": "PDF" },

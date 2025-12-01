@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "Outils PDF - Tout en Un" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "Convertissez, fusionnez, divisez, faites pivoter, compressez des PDF et plus encore. 100% local et privé." },
-  "app_title": { "message": "Outils PDF" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "FUSIONNER" },
   "tab_img": { "message": "IMG" },
   "tab_pdf": { "message": "PDF" },

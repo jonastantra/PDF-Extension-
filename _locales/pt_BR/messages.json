@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "PDF Tools - Tudo em Um" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "Converta, mescle, divida, gire, comprima PDFs e muito mais. 100% local e privado." },
-  "app_title": { "message": "PDF Tools" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "MESCLAR" },
   "tab_img": { "message": "IMG" },
   "tab_pdf": { "message": "PDF" },

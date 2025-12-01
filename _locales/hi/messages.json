@@ -1,7 +1,7 @@
 {
-  "extensionName": { "message": "PDF टूल्स - ऑल इन वन" },
+  "extensionName": { "message": "Ultimate PDF: All-in-One Editor" },
   "extensionDescription": { "message": "PDF कन्वर्ट, मर्ज, स्प्लिट, रोटेट, कंप्रेस और बहुत कुछ। 100% लोकल और प्राइवेट।" },
-  "app_title": { "message": "PDF टूल्स" },
+  "app_title": { "message": "Ultimate PDF" },
   "tab_merge": { "message": "मर्ज" },
   "tab_img": { "message": "इमेज" },
   "tab_pdf": { "message": "PDF" },
